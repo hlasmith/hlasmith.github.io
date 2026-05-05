@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Harrison Smith — Delivery Manager, Project Manager, Scrum Master</title>
+  <meta name="description" content="Personal site and blog by Harrison Smith. Writing about digital delivery, agile, university life, sports and more.">
+  <meta property="og:title" content="Harrison Smith — Delivery Manager">
+  <meta property="og:description" content="Personal site and blog. Writing about digital delivery, agile, university life, sports and more.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hlasmith.github.io">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Harrison Smith</a>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-cover">
+      <!-- Replace with your own cover image: <img src="images/cover.jpg" alt="Cover"> -->
+    </div>
+    <div class="hero-content">
+      <div class="hero-avatar animate-in">
+        <!-- Replace with your photo: <img src="images/avatar.jpg" alt="Harrison Smith"> -->
+        HS
+      </div>
+      <h1 class="animate-in delay-1">Hey, I'm Harrison Smith</h1>
+      <p class="hero-subtitle animate-in delay-2">Delivery Manager / Project Manager / Scrum Master</p>
+      <p class="hero-bio animate-in delay-2">I like figuring out how to get things done well — then writing about it. Sometimes I write about football too.</p>
+      <div class="hero-ctas animate-in delay-3">
+        <a href="blog.html" class="btn btn-primary">Read the blog</a>
+        <a href="about.html" class="btn btn-secondary">About me</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+
+    <!-- Featured Post -->
+    <section class="section scroll-reveal">
+      <p class="section-label">Featured</p>
+      <a href="blog/scrum-to-kanban.html" class="featured-card">
+        <div class="featured-image">
+          <!-- <img src="images/featured.jpg" alt="Featured post"> -->
+          <span style="font-size:13px;color:var(--color-text-muted);">Image</span>
+        </div>
+        <div>
+          <div class="featured-meta">
+            <span class="tag tag-delivery">Delivery &amp; Agile</span>
+            <span class="read-time">8 min read</span>
+          </div>
+          <h3>Why I switched from Scrum to Kanban — and what happened next</h3>
+          <p class="featured-excerpt">A real-world account of transitioning a financial services client from sprint-based delivery to flow-based Kanban, and the lessons learned along the way.</p>
+        </div>
+      </a>
+    </section>
+
+    <!-- Latest Posts -->
+    <section class="section scroll-reveal">
+      <div class="section-header">
+        <p class="section-label">Latest posts</p>
+        <a href="blog.html" class="view-all">View all →</a>
+      </div>
+      <div class="post-list">
+        <a href="blog/stakeholder-management.html" class="post-card">
+          <div>
+            <h3>Lessons from my degree on stakeholder management</h3>
+            <div class="post-card-meta">
+              <span class="tag tag-uni">University &amp; Life</span>
+              <span class="read-time">4 min read</span>
+            </div>
+          </div>
+          <span class="post-card-date">28 Apr 2026</span>
+        </a>
+        <a href="blog/leeds-united.html" class="post-card">
+          <div>
+            <h3>Leeds United: where do we go from here?</h3>
+            <div class="post-card-meta">
+              <span class="tag tag-sports">Sports</span>
+              <span class="read-time">3 min read</span>
+            </div>
+          </div>
+          <span class="post-card-date">21 Apr 2026</span>
+        </a>
+        <a href="blog/ai-tools-delivery.html" class="post-card">
+          <div>
+            <h3>The AI tools I actually use day-to-day as a Delivery Manager</h3>
+            <div class="post-card-meta">
+              <span class="tag tag-delivery">Delivery &amp; Agile</span>
+              <span class="read-time">6 min read</span>
+            </div>
+          </div>
+          <span class="post-card-date">14 Apr 2026</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Browse by Topic -->
+    <section class="section scroll-reveal">
+      <p class="section-label">Browse by topic</p>
+      <div class="topic-grid">
+        <a href="blog.html?topic=delivery" class="topic-card">
+          <div class="topic-icon" style="background: var(--tag-delivery-bg);">&#9881;&#65039;</div>
+          <h3>Delivery &amp; Agile</h3>
+          <p class="topic-count">Posts about getting things shipped</p>
+        </a>
+        <a href="blog.html?topic=uni" class="topic-card">
+          <div class="topic-icon" style="background: var(--tag-uni-bg);">&#127891;</div>
+          <h3>University &amp; Life</h3>
+          <p class="topic-count">Degree life and personal reflections</p>
+        </a>
+        <a href="blog.html?topic=sports" class="topic-card">
+          <div class="topic-icon" style="background: var(--tag-sports-bg);">&#9917;</div>
+          <h3>Sports</h3>
+          <p class="topic-count">Football, FPL and everything else</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- CTA Strip -->
+    <div class="cta-strip scroll-reveal">
+      <h2>Like what you're reading?</h2>
+      <p>I post new stuff regularly about delivery, agile, sports and life. Come say hello.</p>
+      <div class="cta-strip-buttons">
+        <a href="https://www.linkedin.com/in/harrisonsmith" target="_blank" rel="noopener" class="btn btn-linkedin">Connect on LinkedIn</a>
+        <a href="contact.html" class="btn btn-secondary">Get in touch</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <p class="footer-copy">&copy; 2026 Harrison Smith</p>
+        <p class="footer-tagline">Shipping things, writing things.</p>
+      </div>
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/harrisonsmith" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/hlasmith" target="_blank" rel="noopener">GitHub</a>
+        <a href="contact.html">Email</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

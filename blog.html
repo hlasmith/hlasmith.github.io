@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog — Harrison Smith</title>
+  <meta name="description" content="Blog posts by Harrison Smith on delivery management, agile, university life, sports and more.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Harrison Smith</a>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="blog.html" class="active">Blog</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="page-header animate-in">
+      <h1>Blog</h1>
+      <p>Thoughts on delivery, agile, university, sports and life.</p>
+    </div>
+
+    <!-- Filters -->
+    <div class="blog-filters animate-in delay-1">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="delivery">Delivery &amp; Agile</button>
+      <button class="filter-btn" data-filter="uni">University &amp; Life</button>
+      <button class="filter-btn" data-filter="sports">Sports</button>
+    </div>
+
+    <!-- Post List -->
+    <div class="post-list animate-in delay-2">
+
+      <a href="blog/scrum-to-kanban.html" class="post-card" data-topic="delivery">
+        <div>
+          <h3>Why I switched from Scrum to Kanban — and what happened next</h3>
+          <div class="post-card-meta">
+            <span class="tag tag-delivery">Delivery &amp; Agile</span>
+            <span class="read-time">8 min read</span>
+          </div>
+        </div>
+        <span class="post-card-date">5 May 2026</span>
+      </a>
+
+      <a href="blog/stakeholder-management.html" class="post-card" data-topic="uni">
+        <div>
+          <h3>Lessons from my degree on stakeholder management</h3>
+          <div class="post-card-meta">
+            <span class="tag tag-uni">University &amp; Life</span>
+            <span class="read-time">4 min read</span>
+          </div>
+        </div>
+        <span class="post-card-date">28 Apr 2026</span>
+      </a>
+
+      <a href="blog/leeds-united.html" class="post-card" data-topic="sports">
+        <div>
+          <h3>Leeds United: where do we go from here?</h3>
+          <div class="post-card-meta">
+            <span class="tag tag-sports">Sports</span>
+            <span class="read-time">3 min read</span>
+          </div>
+        </div>
+        <span class="post-card-date">21 Apr 2026</span>
+      </a>
+
+      <a href="blog/ai-tools-delivery.html" class="post-card" data-topic="delivery">
+        <div>
+          <h3>The AI tools I actually use day-to-day as a Delivery Manager</h3>
+          <div class="post-card-meta">
+            <span class="tag tag-delivery">Delivery &amp; Agile</span>
+            <span class="read-time">6 min read</span>
+          </div>
+        </div>
+        <span class="post-card-date">14 Apr 2026</span>
+      </a>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <p class="footer-copy">&copy; 2026 Harrison Smith</p>
+        <p class="footer-tagline">Shipping things, writing things.</p>
+      </div>
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/harrisonsmith" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/hlasmith" target="_blank" rel="noopener">GitHub</a>
+        <a href="contact.html">Email</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Blog filtering
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const postCards = document.querySelectorAll('.post-card[data-topic]');
+
+    // Check URL for topic param
+    const urlParams = new URLSearchParams(window.location.search);
+    const topicParam = urlParams.get('topic');
+    if (topicParam) {
+      filterBtns.forEach(btn => btn.classList.remove('active'));
+      const matchBtn = document.querySelector(`.filter-btn[data-filter="${topicParam}"]`);
+      if (matchBtn) matchBtn.classList.add('active');
+      filterPosts(topicParam);
+    }
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        filterPosts(btn.dataset.filter);
+      });
+    });
+
+    function filterPosts(filter) {
+      postCards.forEach(card => {
+        if (filter === 'all' || card.dataset.topic === filter) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>
