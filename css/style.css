@@ -136,7 +136,7 @@ img { max-width: 100%; height: auto; display: block; }
 .hero { position: relative; overflow: hidden; }
 
 .hero-cover {
-  height: 160px;
+  height: 200px;
   background: linear-gradient(135deg, #E1F5EE 0%, #d4ede4 40%, #c8e6db 100%);
   position: relative;
 }
