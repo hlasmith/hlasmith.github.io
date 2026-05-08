@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Why I switched from Scrum to Kanban — Harrison Smith</title>
+  <title>Why I switched from Scrum to Kanban — and what happened next — Harrison Smith</title>
   <meta name="description" content="A real-world account of transitioning a financial services client from sprint-based delivery to flow-based Kanban.">
   <link rel="stylesheet" href="../css/style.css">
 </head>
@@ -42,29 +42,83 @@
       </div>
 
       <div class="animate-in delay-1">
-        <p>This is a sample blog post to show you what the template looks like. Replace this content with your own writing!</p>
 
         <h2>The problem with Scrum (for us)</h2>
-        <p>Write your content here. You can use all standard HTML formatting — paragraphs, headings, lists, blockquotes, code blocks, and more.</p>
+
+        <p>Let me set the scene. I was managing a financial services account with a team that was juggling a lot: project delivery on this account, live service support, and several other project commitments for other clients. This wasn't a dedicated full time or even half time team. If you've ever tried to run structured two-week sprints with a team that's spread across multiple workstreams, you'll know exactly where this is going.</p>
+
+        <p>We were never hitting our sprint goals. Not once. And it wasn't because the team weren't working hard, they absolutely were. The issue was that sprint planning assumed a level of predictability that just didn't exist on this account. We'd commit to a set of stories on a Monday, and by Wednesday half the team would be pulled onto a critical support ticket that had come in overnight. The sprint goal was dead on arrival, and everyone knew it. It became a bit of a running joke, which is never a great sign for a framework that's supposed to give your team focus and purpose.</p>
+
+        <p>On top of that, the ceremonies were eating us alive. Sprint planning, daily standups, sprint review, sprint retro, backlog refinement — all valuable in theory, but when your team is relatively small and also handling BAU support, that's a significant chunk of the week gone before anyone's written a line of code. The team hadn't worked in Scrum before either, or at least not regularly enough for it to feel natural. So every ceremony felt slightly forced, like we were going through the motions because the framework said we should, not because it was actually helping us deliver.</p>
+
+        <p>And then there was the dev-to-testing handover problem. Work would sit in a "ready for QA" state for days because testers were blocked or pulled onto something else. Sprint velocity looked fine on paper, but actual cycle time — the time from picking something up to getting it deployed — was painfully slow. We were measuring the wrong things and celebrating the wrong wins.</p>
 
         <blockquote>
-          This is what a blockquote looks like. Great for highlighting key takeaways or quotes.
+          We were measuring the wrong things and celebrating the wrong wins.
         </blockquote>
 
-        <h2>Why Kanban made more sense</h2>
-        <p>Another section of your post. Keep writing naturally — the styling handles the rest.</p>
+        <p>Something had to change.</p>
 
-        <h3>The key metrics we tracked</h3>
-        <ul>
-          <li>Cycle time from ticket creation to deployment</li>
-          <li>Work in progress limits across the team</li>
-          <li>Throughput per week</li>
-        </ul>
+        <h2>Why Kanban made more sense</h2>
+
+        <p>I'd been reading about Kanban for a while and quietly thinking it might be a better fit. The core idea is simple: instead of planning work in fixed-length sprints, you pull work through a continuous flow system with explicit limits on how much can be in progress at any one time. No sprint commitments, no sprint goals, no start-and-stop rhythm. Just a steady, managed flow of work from backlog to done.</p>
+
+        <p>For a team juggling project work, support tickets, and commitments to other clients, this made so much more sense. Support work could flow through the same board without blowing up a sprint commitment. The team could pull the next highest-priority item when they had capacity, rather than being locked into a plan that was already outdated.</p>
+
+        <p>The other thing that appealed to me — and this is a big deal if you know me — is that Kanban is inherently data-driven. I'm a data-driven thinker. I want numbers, I want trends, I want to be able to point at a chart and say "this is what's actually happening." Kanban gives you cycle time, lead time, throughput, cumulative flow diagrams — all metrics that tell you how work is actually moving through your system, not just how much you planned versus how much you finished. That shift from "did we hit the sprint goal?" to "how fast is work flowing and where are the bottlenecks?" was massive for me.</p>
+
+        <h2>Making the switch</h2>
+
+        <p>I didn't just wake up one morning and rip up the sprint board. I put together a proper transition plan, actually built a full slide deck for the team walking through what was changing, what wasn't, and why. I wanted everyone to understand this wasn't about abandoning structure. It was about finding the right structure.</p>
+
+        <p>We kept standups (shortened them, made them board-focused). We kept retros. We dropped sprint planning and sprint review in their traditional form and replaced them with replenishment meetings and delivery reviews. The board was redesigned with clear columns and WIP limits.</p>
+
+        <p>And then we started. And honestly? It was a bit rocky.</p>
+
+        <h2>The bumpy bit</h2>
+
+        <p>The hardest thing to enforce was WIP limits. The whole point of limiting work in progress is to stop the team from context-switching and encourage finishing things before starting new ones. Sounds great in theory. In practice, people really struggle with it. There's a natural instinct to start the next thing rather than help unblock the current thing, and breaking that habit took time and a lot of conversations.</p>
+
+        <p>The other major headache was Azure DevOps admin. Kanban only works if your board reflects reality. That means stories need to move across the board in real time, tasks need updating, comments need logging. This was a collective learning curve for all of us. When you're heads down in the work, updating the board doesn't always feel like the priority, but if the board doesn't reflect what's actually happening, your data is worthless. And if your data is worthless, you've lost the single biggest advantage Kanban gives you.</p>
+
+        <blockquote>
+          The data is only as good as the inputs — and we need that data to make decisions, spot trends, and have evidence-based conversations with the client about capacity and delivery.
+        </blockquote>
+
+        <p>This is still something we work on as a team. Building board hygiene into the daily rhythm rather than treating it as a separate admin task has been a gradual process. But it matters.</p>
+
+        <h2>What actually improved</h2>
+
+        <p>Once we got through the initial adjustment period, the improvements were genuinely significant. And I don't say that lightly — I was nervous this might not work, and I'd have to awkwardly reintroduce sprints while pretending it was always the plan.</p>
+
+        <p>Cycle time dropped. Things that used to sit in "ready for QA" for days started moving faster because the WIP limits forced us to address bottlenecks rather than just pile more work into the system. When a tester was blocked, it became the team's problem, not just the tester's problem. That shift in mindset alone was worth the transition.</p>
+
+        <p>The team felt less pressured. No more sprint goals hanging over everyone's heads that we all knew we weren't going to hit. Instead, there was a steady, manageable rhythm. Work came in, work went out. People could focus on doing one thing well rather than juggling five things badly.</p>
+
+        <p>Ceremonies took up less time. We went from what felt like half the week in meetings to a much leaner setup that gave the team back hours of productive time. The meetings we kept were sharper and more focused because they were driven by what was actually on the board, not by a framework telling us what to discuss.</p>
+
+        <p>And the visibility improved dramatically. I could look at the board and the data and have a genuine, honest conversation about where we were. No spin, no estimates masquerading as commitments. Just reality. For a data-driven thinker, that's the dream.</p>
 
         <h2>What I'd do differently</h2>
-        <p>Wrap up your post with reflections, lessons learned, or a call to action.</p>
 
-        <p>Thanks for reading. If you've been through a similar transition, I'd love to hear about your experience — find me on <a href="https://www.linkedin.com/in/harrison-smith-22456b268" target="_blank" rel="noopener">LinkedIn</a>.</p>
+        <p>If I were to do this transition again, there are a couple of things I'd change.</p>
+
+        <p>First, I'd invest more time upfront in the Azure DevOps setup and board hygiene expectations. I underestimated how much of a learning curve this would be for everyone. I'd probably run a dedicated session just on "this is how we use the board, this is why it matters, and this is the standard we expect" before we even started.</p>
+
+        <p>Second, I'd introduce WIP limits more gradually. We went from no WIP limits (Scrum doesn't really enforce them) to fairly strict ones, and it was a bit of a shock. A phased approach — starting loose and tightening over a few weeks — would have been smoother.</p>
+
+        <p>Third, I'd set clearer expectations with the client earlier. They didn't need to understand the methodology change in detail, but framing it as "we're optimising how we deliver to give you faster, more predictable outcomes" would have been useful context.</p>
+
+        <h2>The takeaway</h2>
+
+        <p>Scrum is a great framework. It works brilliantly for teams with predictable work, stable capacity, and the maturity to make sprints meaningful. But it's not the only way, and it's definitely not the right way for every team.</p>
+
+        <blockquote>
+          The most important thing I want to emphasise is this: methodology is a tool, not a rule. The best teams I've seen aren't religious about any one framework — they understand the principles behind them and adapt accordingly.
+        </blockquote>
+
+        <p>If you've been through a similar transition or you're sitting on a team where Scrum isn't quite working, I'd love to hear about your experience — find me on <a href="https://www.linkedin.com/in/harrison-smith-22456b268" target="_blank" rel="noopener">LinkedIn</a>.</p>
+
       </div>
 
     </div>
