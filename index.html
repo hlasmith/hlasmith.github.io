@@ -15,16 +15,19 @@
   <nav class="nav">
     <div class="nav-inner">
       <a href="index.html" class="nav-logo">Harrison Smith</a>
-      <button class="nav-toggle" aria-label="Toggle navigation">
-        <span></span><span></span><span></span>
-      </button>
-      <ul class="nav-links">
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="writing.html">Writing</a></li>
-        <li><a href="work.html">Work</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+      <div class="nav-right">
+        <button class="nav-toggle" aria-label="Toggle navigation">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="writing.html">Writing</a></li>
+          <li><a href="work.html">Work</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode" role="button" tabindex="0"></div>
+      </div>
     </div>
   </nav>
 
@@ -64,36 +67,24 @@
         <p class="section-label">Latest writing</p>
         <a href="writing.html" class="view-all">View all →</a>
       </div>
-      <div class="post-list">
-        <a href="blog/marathon.html" class="post-card">
-          <div>
-            <h3>From "piece of cake" to shin splints</h3>
-            <div class="post-card-meta">
-              <span class="tag tag-sports">Sports</span>
-              <span class="read-time">7 min read</span>
-            </div>
-          </div>
-          <span class="post-card-date">8 May 2026</span>
+      <div class="post-grid">
+        <a href="blog/marathon.html" class="post-grid-card">
+          <span class="post-date">8 May 2026</span>
+          <h3>From "piece of cake" to shin splints</h3>
+          <p class="post-excerpt">Why I'm running a half and full marathon this year, and the cause behind it...</p>
+          <span class="tag tag-sports">Sports</span>
         </a>
-        <a href="blog/strategy-module.html" class="post-card">
-          <div>
-            <h3>Reflecting on my top 5 modules: business strategy</h3>
-            <div class="post-card-meta">
-              <span class="tag tag-uni">University &amp; Life</span>
-              <span class="read-time">10 min read</span>
-            </div>
-          </div>
-          <span class="post-card-date">8 May 2026</span>
+        <a href="blog/strategy-module.html" class="post-grid-card">
+          <span class="post-date">8 May 2026</span>
+          <h3>Reflecting on my top 5 modules: business strategy</h3>
+          <p class="post-excerpt">The module that rewired how I think about delivery...</p>
+          <span class="tag tag-uni">University &amp; Life</span>
         </a>
-        <a href="blog/scrum-to-kanban.html" class="post-card">
-          <div>
-            <h3>Why I switched from Scrum to Kanban — and what happened next</h3>
-            <div class="post-card-meta">
-              <span class="tag tag-delivery">Delivery &amp; Agile</span>
-              <span class="read-time">8 min read</span>
-            </div>
-          </div>
-          <span class="post-card-date">5 May 2026</span>
+        <a href="blog/scrum-to-kanban.html" class="post-grid-card">
+          <span class="post-date">5 May 2026</span>
+          <h3>Why I switched from Scrum to Kanban</h3>
+          <p class="post-excerpt">A real-world account of transitioning from sprints to flow...</p>
+          <span class="tag tag-delivery">Delivery &amp; Agile</span>
         </a>
       </div>
     </section>
