@@ -84,7 +84,7 @@
 /* --- Reset & Base --- */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; min-height: 100%; }
 
 body {
   font-family: var(--font-body);
@@ -94,6 +94,9 @@ body {
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
   transition: background 0.3s ease, color 0.3s ease;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 a { color: var(--color-accent); text-decoration: none; transition: color var(--transition); }
@@ -102,7 +105,7 @@ a:hover { color: var(--color-accent-dark); }
 img { max-width: 100%; height: auto; display: block; }
 
 /* --- Container --- */
-.container { max-width: var(--max-width); margin: 0 auto; padding: 0 40px; }
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 40px; flex: 1; }
 
 /* --- Navigation --- */
 .nav {
