@@ -3,13 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blog — Harrison Smith</title>
-  <meta name="description" content="Blog posts by Harrison Smith on delivery management, agile, university life, sports and more.">
+  <title>Writing — Harrison Smith</title>
+  <meta name="description" content="Writing by Harrison Smith on delivery management, agile, university life, sport and more.">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <!-- Navigation -->
   <nav class="nav">
     <div class="nav-inner">
       <a href="index.html" class="nav-logo">Harrison Smith</a>
@@ -19,9 +18,8 @@
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="blog.html" class="active">Blog</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="cv.html">CV</a></li>
+        <li><a href="writing.html" class="active">Writing</a></li>
+        <li><a href="work.html">Work</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </div>
@@ -29,24 +27,23 @@
 
   <div class="container">
     <div class="page-header animate-in">
-      <h1>Blog</h1>
-      <p>Thoughts on delivery, agile, university, sports and life.</p>
+      <p class="page-header-label">Writing</p>
+      <h1>Writing.</h1>
+      <p>Thoughts on delivery, agile, university, sport and life.</p>
     </div>
 
-    <!-- Filters -->
-    <div class="blog-filters animate-in delay-1">
+    <div class="writing-filters animate-in delay-1">
       <button class="filter-btn active" data-filter="all">All</button>
       <button class="filter-btn" data-filter="delivery">Delivery &amp; Agile</button>
       <button class="filter-btn" data-filter="uni">University &amp; Life</button>
       <button class="filter-btn" data-filter="sports">Sports</button>
     </div>
 
-    <!-- Post List -->
     <div class="post-list animate-in delay-2">
 
       <a href="blog/marathon.html" class="post-card" data-topic="sports">
         <div>
-          <h3>From 'piece of cake' to shin splints: why I'm running a half and full marathon this year</h3>
+          <h3>From "piece of cake" to shin splints</h3>
           <div class="post-card-meta">
             <span class="tag tag-sports">Sports</span>
             <span class="read-time">7 min read</span>
@@ -57,7 +54,7 @@
 
       <a href="blog/strategy-module.html" class="post-card" data-topic="uni">
         <div>
-          <h3>Reflecting on my top 5 university modules — Part 1: Business Strategy</h3>
+          <h3>Reflecting on my top 5 modules: business strategy</h3>
           <div class="post-card-meta">
             <span class="tag tag-uni">University &amp; Life</span>
             <span class="read-time">10 min read</span>
@@ -77,16 +74,15 @@
         <span class="post-card-date">5 May 2026</span>
       </a>
 
-
     </div>
   </div>
 
-  <!-- Footer -->
   <footer class="footer">
     <div class="footer-inner">
       <div>
-        <p class="footer-copy">&copy; 2026 Harrison Smith</p>
-        <p class="footer-tagline">Shipping things, writing things.</p>
+        <p class="footer-name">Harrison Smith</p>
+        <p class="footer-role">Delivery Manager · Wakefield, West Yorkshire</p>
+        <p class="footer-tagline">Managing life and writing about it.</p>
       </div>
       <div class="footer-links">
         <a href="https://www.linkedin.com/in/harrison-smith-22456b268" target="_blank" rel="noopener">LinkedIn</a>
@@ -98,11 +94,9 @@
 
   <script src="js/main.js"></script>
   <script>
-    // Blog filtering
     const filterBtns = document.querySelectorAll('.filter-btn');
     const postCards = document.querySelectorAll('.post-card[data-topic]');
 
-    // Check URL for topic param
     const urlParams = new URLSearchParams(window.location.search);
     const topicParam = urlParams.get('topic');
     if (topicParam) {
