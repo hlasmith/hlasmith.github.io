@@ -878,6 +878,15 @@ img { max-width: 100%; height: auto; display: block; }
   transform: translateY(-2px);
 }
 
+.approach-number {
+  font-family: var(--font-heading);
+  font-size: 32px;
+  color: var(--color-accent);
+  display: block;
+  margin-bottom: 6px;
+  opacity: 0.6;
+}
+
 .approach-card h3 { font-size: 16px; font-weight: 500; margin-bottom: 8px; color: var(--color-text); }
 .approach-card p { font-size: 13px; color: var(--color-text-secondary); line-height: 1.6; }
 
