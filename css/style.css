@@ -850,6 +850,37 @@ img { max-width: 100%; height: auto; display: block; }
 
 .work-card p { font-size: 13px; color: var(--color-text-secondary); line-height: 1.6; }
 
+.approach-intro {
+  max-width: 720px;
+  font-size: 15px;
+  color: var(--color-text-secondary);
+  line-height: 1.8;
+  margin-bottom: 24px;
+}
+
+.approach-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.approach-card {
+  background: var(--color-bg-card);
+  border: 0.5px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 22px 24px;
+  transition: all var(--transition);
+}
+
+.approach-card:hover {
+  border-color: var(--color-accent);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.approach-card h3 { font-size: 16px; font-weight: 500; margin-bottom: 8px; color: var(--color-text); }
+.approach-card p { font-size: 13px; color: var(--color-text-secondary); line-height: 1.6; }
+
 /* --- Contact Page --- */
 .contact-grid {
   display: grid;
@@ -935,6 +966,7 @@ img { max-width: 100%; height: auto; display: block; }
   .post-grid { grid-template-columns: 1fr; }
   .topic-grid { grid-template-columns: 1fr; }
   .work-grid { grid-template-columns: 1fr; }
+  .approach-grid { grid-template-columns: 1fr; }
   .contact-grid { grid-template-columns: 1fr; }
 
   .about-layout { grid-template-columns: 1fr; gap: 24px; }
