@@ -850,6 +850,22 @@ img { max-width: 100%; height: auto; display: block; }
 
 .work-card p { font-size: 13px; color: var(--color-text-secondary); line-height: 1.6; }
 
+/* --- Card Link Indicator --- */
+.card-link-indicator {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--color-accent);
+  margin-top: 8px;
+  display: block;
+  transition: opacity var(--transition);
+}
+
+.post-card .card-link-indicator {
+  display: inline;
+  margin-top: 0;
+  margin-right: 12px;
+}
+
 .approach-intro {
   max-width: 720px;
   font-size: 15px;
