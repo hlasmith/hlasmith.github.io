@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <!-- Subtle grid lines -->
+  <line x1="8" y1="80" x2="92" y2="80" stroke="#9E9E97" stroke-width="0.5" opacity="0.3"/>
+  <line x1="8" y1="60" x2="92" y2="60" stroke="#9E9E97" stroke-width="0.5" opacity="0.2"/>
+  <line x1="8" y1="40" x2="92" y2="40" stroke="#9E9E97" stroke-width="0.5" opacity="0.15"/>
+  <line x1="8" y1="20" x2="92" y2="20" stroke="#9E9E97" stroke-width="0.5" opacity="0.1"/>
+
+  <!-- Agency phase: flat grey line -->
+  <line x1="12" y1="68" x2="45" y2="66" stroke="#9E9E97" stroke-width="2.5" stroke-linecap="round" opacity="0.55"/>
+
+  <!-- Consultancy phase: rising amber curve -->
+  <path d="M45 66 C55 60 65 40 82 16" stroke="#B8922F" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Arrowhead at curve end -->
+  <path d="M77 10 L84 17 L76 21" stroke="#B8922F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Start dot -->
+  <circle cx="12" cy="68" r="3.5" fill="#9E9E97" opacity="0.55"/>
+
+  <!-- Inflection dot -->
+  <circle cx="45" cy="66" r="3" fill="#9E9E97" opacity="0.35"/>
+
+  <!-- End dot (amber accent) -->
+  <circle cx="82" cy="16" r="4.5" fill="#B8922F"/>
+</svg>
