@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Are MCPs the new APIs? — Harrison Smith</title>
+  <meta name="description" content="A practitioner's take on MCPs vs APIs, what they actually are, and whether the hype is justified.">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo">Harrison Smith</a>
+      <div class="nav-right">
+        <button class="nav-toggle" aria-label="Toggle navigation">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../writing.html" class="active">Writing</a></li>
+          <li><a href="../work.html">Work</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+        <div class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode" role="button" tabindex="0"></div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="post-content">
+
+      <div class="post-hero animate-in">
+        <a href="../writing.html" style="font-size:13px;color:var(--color-text-muted);display:inline-block;margin-bottom:20px;">← Back to all posts</a>
+        <h1>Are MCPs the new APIs?</h1>
+        <div class="post-hero-meta">
+          <span class="tag tag-delivery">Delivery &amp; Agile</span>
+          <span>6 June 2026</span>
+          <span>·</span>
+          <span>5 min read</span>
+        </div>
+      </div>
+
+      <div class="animate-in delay-1">
+
+        <p>I use Claude every day. I've got connectors running in it, I use the ADO MCP server through Claude Code at work, and at some point I started referring to these things as "MCPs" without fully being able to explain what one actually was beyond "the thing that lets Claude talk to other stuff."</p>
+
+        <p>So when the question started appearing on TikTok, I figured it was time to actually get my head around it.</p>
+
+        <h2>First, what even is an MCP?</h2>
+
+        <p>The Model Context Protocol was introduced by Anthropic in late 2024. The simplest way I've heard it described is a USB-C port for AI. Where APIs are the standard way software systems have been talking to each other for decades, MCP is a layer specifically built for AI agents to plug into tools, data sources and services in a smarter, more dynamic way.</p>
+
+        <p>The key difference: APIs are largely static. You define exactly what you want, you get exactly that back. It's a predefined handshake. MCP servers, by contrast, are built for communication between AI agents and data sources, acting as a dynamic gateway that allows AI models to query and interact with real-world data through contextual requests rather than fixed endpoints. Instead of asking for a specific thing, you're asking for what you need based on intent, and the MCP figures out how to get it.</p>
+
+        <p>Think of it this way: an API is like giving someone a very precise instruction manual. An MCP is like giving a capable colleague access to everything they need to just get on with it.</p>
+
+        <h2>Why does this matter to someone like me?</h2>
+
+        <p>I'm not a developer. I'm a Delivery Manager who uses AI tools heavily day-to-day. And honestly, the shift has been noticeable.</p>
+
+        <p>The most concrete example: I use the ADO MCP server through Claude Code as an assistant PM and DM. One of the main things it handles is my RAID log, pulling information in, updating entries, keeping it current without me having to context-switch into ADO, find the right work item, and type it all out manually. It just does it. That might sound like a small efficiency gain but if you manage RAID logs on live projects, you know how much admin that actually removes.</p>
+
+        <p>The Claude connectors I use in this chat operate the same way. Calendar, Drive, email, all accessible in one conversation without me needing to paste anything in. That's MCP doing the work.</p>
+
+        <p>It's a small thing until it isn't. And then you can't imagine going back.</p>
+
+        <h2>So are they replacing APIs?</h2>
+
+        <p>Here's where I landed after actually reading about it, and I'll be honest, it's a more nuanced answer than TikTok suggests.</p>
+
+        <p>MCPs are not poised to replace APIs entirely. APIs will continue to play a vital role in system-to-system communication, particularly in scenarios where interactions are well defined and predictable. They solve different problems. APIs aren't going anywhere any more than email disappeared when Slack arrived.</p>
+
+        <p>What's genuinely significant is the adoption speed. One year after launch, MCP had become the universal standard for connecting AI agents to enterprise tools, with 97 million monthly SDK downloads and backing from Anthropic, OpenAI, Google and Microsoft. That kind of cross-industry consensus doesn't happen often or quickly. Rather than replacing APIs, MCPs create a standardised interface layer that sits between AI agents and the underlying API infrastructure.</p>
+
+        <p>The "new API" framing is a bit lazy. What they actually are is a smarter coordination layer on top of the infrastructure we already have.</p>
+
+        <h2>There are real limitations worth knowing</h2>
+
+        <p>It's not all clean. Security concerns are real, with risks around prompt injection, where attackers can hide malicious instructions in documents, emails or Slack messages, and an AI agent processing that content through MCP might follow those hidden instructions instead of your actual requests.</p>
+
+        <p>There are also gaps in enterprise authentication. SSO support is still evolving, and in large organisations that's not a small footnote. For anyone assessing whether to push MCP adoption internally, these aren't blockers but they're conversations worth having early.</p>
+
+        <h2>My take</h2>
+
+        <p>I went into this genuinely undecided and came out thinking: MCPs matter, but the hype is slightly ahead of the reality.</p>
+
+        <p>They're not replacing APIs. What they are doing is making AI genuinely useful in the flow of actual work, not just as a chatbot you consult and then leave to go do the thing yourself. That shift is real, it's happening, and if you work with AI tools in any meaningful way, you're probably already using MCP whether you know it or not.</p>
+
+        <p>I didn't know what one was six months ago. Now they're quietly running in the background of most of my working day.</p>
+
+        <p>That feels like a decent measure of whether something actually matters.</p>
+
+        <p>Thanks for reading. If you've got thoughts on this, or you're using MCPs in an interesting way, I'd love to hear about it. Find me on <a href="https://www.linkedin.com/in/harrison-smith-22456b268" target="_blank" rel="noopener">LinkedIn</a>.</p>
+
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <p class="footer-name">Harrison Smith</p>
+        <p class="footer-role">Delivery Manager · Wakefield, West Yorkshire</p>
+        <p class="footer-tagline">Managing life and writing about it.</p>
+      </div>
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/harrison-smith-22456b268" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/hlasmith" target="_blank" rel="noopener">GitHub</a>
+        <a href="../contact.html">Email</a>
+        <a href="../privacy.html">Privacy</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "wyqfup034s");
+  </script>
+  <script src="../js/main.js"></script>
+</body>
+</html>
