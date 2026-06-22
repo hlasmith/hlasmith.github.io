@@ -1,0 +1,36 @@
+# Goes in your repo at: .github/workflows/ci.yml
+#
+# Runs on every PR into main. This is the gate: a PR can only auto-merge once
+# this "quality" job passes. Tune the thresholds in .lighthouserc.json to taste.
+
+name: PR quality checks
+
+on:
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Check for broken links
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: --no-progress --exclude-mail "**/*.html"
+          fail: true
+
+      - name: Lighthouse CI (performance, a11y, SEO, best practices)
+        uses: treosh/lighthouse-ci-action@v12
+        with:
+          configPath: ./.lighthouserc.json
+          uploadArtifacts: false
+          temporaryPublicStorage: false
