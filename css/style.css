@@ -104,6 +104,22 @@ a:hover { color: var(--color-accent-dark); }
 
 img { max-width: 100%; height: auto; display: block; }
 
+/* --- Skip to content --- */
+.skip-to-content {
+  position: absolute;
+  left: -9999px;
+  top: 8px;
+  z-index: 200;
+  padding: 8px 16px;
+  background: var(--color-text);
+  color: var(--color-bg);
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+}
+.skip-to-content:focus { left: 8px; }
+
 /* --- Container --- */
 .container { max-width: var(--max-width); margin: 0 auto; padding: 0 40px; flex: 1; }
 
