@@ -391,7 +391,7 @@ img { max-width: 100%; height: auto; display: block; }
   padding: 16px 20px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   text-decoration: none;
   color: inherit;
   transition: all var(--transition);
@@ -408,6 +408,13 @@ img { max-width: 100%; height: auto; display: block; }
   font-weight: 500;
   margin-bottom: 4px;
   color: var(--color-text);
+}
+
+.post-card-excerpt {
+  font-size: 13px;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+  margin-bottom: 8px;
 }
 
 .post-card-meta { display: flex; gap: 8px; align-items: center; }
