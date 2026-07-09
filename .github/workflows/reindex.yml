@@ -1,0 +1,33 @@
+name: Reindex search on deploy
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch: {}   # lets you trigger manually from the Actions tab
+
+concurrency:
+  group: reindex-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  reindex:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Wait for Cloudflare Pages deploy to go live
+        # Give Pages time to build and deploy before we reindex.
+        run: sleep 120
+
+      - name: Trigger reindex
+        env:
+          REINDEX_KEY: ${{ secrets.REINDEX_KEY }}
+        run: |
+          if [ -z "$REINDEX_KEY" ]; then
+            echo "REINDEX_KEY secret is not set in this repo. Add it under Settings > Secrets and variables > Actions."
+            exit 1
+          fi
+          RESPONSE=$(curl --fail --silent --show-error --max-time 90 \
+            -X POST \
+            -H "x-reindex-key: $REINDEX_KEY" \
+            https://hlasmith.co.uk/api/reindex)
+          echo "Reindex response: $RESPONSE"
+          echo "$RESPONSE" | grep -q '"vectors"' || { echo "Unexpected response, failing."; exit 1; }
