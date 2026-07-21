@@ -3,7 +3,8 @@
    Dark theme, amber accent, editorial
    ============================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700&family=DM+Serif+Display&display=swap');
+/* Font stylesheet is loaded via <link> in each page's <head>, not @import,
+   so the browser can discover and fetch it in parallel with this file. */
 
 /* --- Light Theme (Default) --- */
 :root {
