@@ -835,7 +835,7 @@ img { max-width: 100%; height: auto; display: block; }
   background: var(--color-accent-light);
   border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
   font-style: italic;
-  color: var(--color-accent);
+  color: var(--color-accent-dark);
 }
 
 .post-content code {
@@ -934,7 +934,7 @@ img { max-width: 100%; height: auto; display: block; }
   display: block;
 }
 
-.diagram-spectrum-stage.active .diagram-spectrum-title { color: var(--color-accent); }
+.diagram-spectrum-stage.active .diagram-spectrum-title { color: var(--color-accent-dark); }
 
 .diagram-spectrum-bullets { list-style: none; padding: 0; font-size: 12px; color: var(--color-text-secondary); }
 .diagram-spectrum-bullets li { padding: 2px 0; }
@@ -992,7 +992,7 @@ img { max-width: 100%; height: auto; display: block; }
   line-height: 1.2;
 }
 
-.diagram-metric-card.highlight .diagram-metric-value { color: var(--color-accent); }
+.diagram-metric-card.highlight .diagram-metric-value { color: var(--color-accent-dark); }
 .diagram-metric-card.negative .diagram-metric-value { color: #c0392b; }
 [data-theme="dark"] .diagram-metric-card.negative .diagram-metric-value { color: #e07070; }
 
