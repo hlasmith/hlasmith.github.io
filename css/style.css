@@ -183,7 +183,7 @@ img { max-width: 100%; height: auto; display: block; }
 
 .nav-links a:hover,
 .nav-links a.active {
-  color: var(--color-accent);
+  color: var(--color-accent-dark);
 }
 
 .nav-links a.active::after {
@@ -325,7 +325,7 @@ img { max-width: 100%; height: auto; display: block; }
 .section-header .view-all {
   font-size: 12px;
   font-weight: 500;
-  color: var(--color-accent);
+  color: var(--color-accent-dark);
 }
 
 /* --- Featured Post --- */
@@ -700,7 +700,7 @@ img { max-width: 100%; height: auto; display: block; }
   content: '→';
   position: absolute;
   left: 0;
-  color: var(--color-accent);
+  color: var(--color-accent-dark);
 }
 
 /* --- Writing Page --- */
@@ -1063,7 +1063,7 @@ img { max-width: 100%; height: auto; display: block; }
 .card-link-indicator {
   font-size: 12px;
   font-weight: 500;
-  color: var(--color-accent);
+  color: var(--color-accent-dark);
   margin-top: 8px;
   display: block;
   transition: opacity var(--transition);
