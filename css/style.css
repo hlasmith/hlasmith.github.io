@@ -1171,6 +1171,13 @@ img { max-width: 100%; height: auto; display: block; }
 .delay-3 { animation-delay: 0.3s; }
 .delay-4 { animation-delay: 0.4s; }
 
+@media (prefers-reduced-motion: reduce) {
+  .animate-in {
+    animation: none;
+    opacity: 1;
+  }
+}
+
 /* --- Mobile Responsive --- */
 @media (max-width: 768px) {
   .container { padding: 0 20px; }
