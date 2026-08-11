@@ -2,9 +2,14 @@
 const navToggle = document.querySelector('.nav-toggle');
 const navLinks = document.querySelector('.nav-links');
 
-if (navToggle) {
+if (navToggle && navLinks) {
+  navLinks.id = navLinks.id || 'nav-links';
+  navToggle.setAttribute('aria-controls', navLinks.id);
+  navToggle.setAttribute('aria-expanded', 'false');
+
   navToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('open');
+    const isOpen = navLinks.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', String(isOpen));
   });
 }
 
@@ -12,6 +17,7 @@ if (navToggle) {
 document.querySelectorAll('.nav-links a').forEach(link => {
   link.addEventListener('click', () => {
     navLinks.classList.remove('open');
+    if (navToggle) navToggle.setAttribute('aria-expanded', 'false');
   });
 });
 
