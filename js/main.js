@@ -28,6 +28,7 @@ document.querySelectorAll('.nav-links a').forEach(link => {
   const hrefPage = href.split('/').pop();
   if (hrefPage === currentPage || (currentPage === '' && hrefPage === 'index.html')) {
     link.classList.add('active');
+    link.setAttribute('aria-current', 'page');
   }
 });
 
