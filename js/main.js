@@ -51,9 +51,17 @@ document.querySelectorAll('.scroll-reveal').forEach(el => {
 // Theme toggle (dark/light mode)
 const themeToggle = document.getElementById('themeToggle');
 const savedTheme = localStorage.getItem('theme');
+const themeColorMeta = document.querySelector('meta[name="theme-color"]');
+
+function syncThemeColorMeta(isDark) {
+  if (themeColorMeta) {
+    themeColorMeta.setAttribute('content', isDark ? '#14161B' : '#F5F2EB');
+  }
+}
 
 if (savedTheme) {
   document.documentElement.setAttribute('data-theme', savedTheme);
+  syncThemeColorMeta(savedTheme === 'dark');
 }
 
 if (themeToggle) {
@@ -68,6 +76,7 @@ if (themeToggle) {
       document.documentElement.removeAttribute('data-theme');
       localStorage.removeItem('theme');
     }
+    syncThemeColorMeta(!!next);
   });
 
   themeToggle.addEventListener('keydown', (e) => {
