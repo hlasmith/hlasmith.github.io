@@ -26,6 +26,7 @@
   --color-accent: #B8922F;
   --color-accent-light: #F5EDD8;
   --color-accent-dark: #7E631B;
+  --color-on-accent: var(--color-text);
 
   --color-border: #DDD9CF;
   --color-border-hover: #C8C3B8;
@@ -67,6 +68,7 @@
   --color-accent: #D4A853;
   --color-accent-light: #2A2520;
   --color-accent-dark: #B8922F;
+  --color-on-accent: var(--color-text-inverse);
 
   --color-border: #2A2D35;
   --color-border-hover: #3A3D45;
@@ -291,7 +293,7 @@ img { max-width: 100%; height: auto; display: block; }
 
 .btn-primary {
   background: var(--color-accent);
-  color: var(--color-text-inverse);
+  color: var(--color-on-accent);
 }
 .btn-primary:hover { background: var(--color-accent-dark); color: var(--color-text-inverse); }
 
@@ -302,8 +304,8 @@ img { max-width: 100%; height: auto; display: block; }
 }
 .btn-secondary:hover { border-color: var(--color-accent); color: var(--color-accent); }
 
-.btn-linkedin { background: #D4A853; color: var(--color-text-inverse); }
-.btn-linkedin:hover { background: #B8922F; color: var(--color-text-inverse); }
+.btn-linkedin { background: #D4A853; color: var(--color-on-accent); }
+.btn-linkedin:hover { background: #B8922F; color: var(--color-on-accent); }
 
 /* --- Section headings --- */
 .section { padding: 0 0 40px; }
@@ -777,7 +779,7 @@ img { max-width: 100%; height: auto; display: block; }
 .filter-btn:hover,
 .filter-btn.active {
   background: var(--color-accent);
-  color: var(--color-text-inverse);
+  color: var(--color-on-accent);
   border-color: var(--color-accent);
 }
 
