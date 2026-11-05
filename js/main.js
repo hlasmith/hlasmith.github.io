@@ -7,11 +7,8 @@
   // ---------- Theme ----------
   var themeBtn = document.querySelector('.nav-theme');
   var themeMeta = document.querySelector('meta[name="theme-color"]');
-  function isDark() {
-    var t = root.getAttribute('data-theme');
-    if (t) return t === 'dark';
-    return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-  }
+  // Light by default for everyone; dark only when the visitor chooses it.
+  function isDark() { return root.getAttribute('data-theme') === 'dark'; }
   function syncTheme() {
     var dark = isDark();
     if (themeBtn) themeBtn.setAttribute('aria-pressed', String(dark));

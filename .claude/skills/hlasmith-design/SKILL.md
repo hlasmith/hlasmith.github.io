@@ -32,7 +32,8 @@ with a 390px mobile board).
 ## Colour: Ocean & coral
 
 Define these as CSS custom properties on `:root`, and redefine them for dark mode under
-`[data-theme="dark"]` (and `prefers-color-scheme: dark` when no choice is stored).
+`[data-theme="dark"]`. **Light is the default for everyone** (it ignores the device setting);
+dark only applies when the visitor taps the dark-mode toggle, and that choice is remembered.
 
 | Token | Light | Dark | Use |
 |---|---|---|---|
