@@ -44,6 +44,14 @@ binding. When in doubt, do less, not more.
 - Visual, layout, spacing, or design-token changes
 - Anything you are not confident a CI check can fully verify
 
+## Caching: bump the asset version
+
+`_headers` caches `/css/*` and `/js/*` for 7 days at Cloudflare and in browsers.
+Every page loads them as `css/style.css?v=XXXX` and `js/main.js?v=XXXX`. **Whenever
+you change `css/style.css` or `js/main.js`, change the `?v=` value on every page**
+(all root pages and every file in `blog/`), or visitors get the old file with the
+new HTML.
+
 ## Design system
 
 The design system lives in `.claude/skills/hlasmith-design/SKILL.md`. Read it
