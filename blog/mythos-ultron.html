@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#F5F2EB">
+  <meta name="theme-color" content="#EEF3F6">
   <script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.setAttribute("data-theme",t);}catch(e){}</script>
   <title>Is Claude Mythos Ultron? — Harrison Smith</title>
   <meta name="description" content="When Anthropic announced their most powerful AI yet and kept it hidden from the public, my first thought was Tony Stark.">
@@ -17,7 +17,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://www.clarity.ms">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700&family=DM+Serif+Display&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;0,6..96,700;1,6..96,500;1,6..96,700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=Public+Sans:wght@400;500;600;700;800&display=swap">
   <link rel="stylesheet" href="../css/style.css">
   <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16.png">
@@ -41,46 +41,81 @@
     }
   }
   </script>
-
 </head>
-<body>
-  <a href="#main-content" class="skip-link">Skip to main content</a>
-
-  <nav class="nav">
-    <div class="nav-inner">
-      <a href="../index.html" class="nav-logo">Harrison Smith</a>
-      <div class="nav-right">
-        <button class="nav-toggle" aria-label="Toggle navigation">
-          <span></span><span></span><span></span>
-        </button>
-        <ul class="nav-links">
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="../about.html">About</a></li>
-          <li><a href="../writing.html" class="active" aria-current="page">Writing</a></li>
-          <li><a href="../search.html">Search</a></li>
-          <li><a href="../work.html">Work</a></li>
-          <li><a href="../contact.html">Contact</a></li>
-        </ul>
-        <div class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode" role="button" tabindex="0"></div>
-      </div>
+<body data-base="../">
+  <a href="#content" class="skip-link">Skip to content</a>
+  <div class="progress" aria-hidden="true"></div>
+<header class="nav" id="top">
+  <nav class="nav-bar" aria-label="Main">
+    <a class="nav-logo glass" href="../index.html" aria-label="hlasmith, home">hlasmith<span>.</span></a>
+    <ul class="nav-links glass">
+      <li><a href="../writing.html" aria-current="page">Writing</a></li>
+      <li><a href="../work.html">Work</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../contact.html">Contact</a></li>
+    </ul>
+    <form class="nav-search glass glass--panel" role="search" action="../search.html">
+      <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+      <label for="nav-q" class="visually-hidden">Search the archive</label>
+      <input id="nav-q" name="q" type="search" maxlength="200" placeholder="Ask the archive anything" autocomplete="off">
+      <button type="button" class="nav-btn nav-search-close" aria-label="Close search"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </form>
+    <div class="nav-actions">
+      <button type="button" class="nav-btn glass nav-search-open" aria-label="Search the archive" aria-expanded="false" aria-controls="nav-search-panel"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></button>
+      <button type="button" class="nav-btn glass nav-theme" aria-label="Dark mode" aria-pressed="false"><svg class="i-moon" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg><svg class="i-sun" aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+      <button type="button" class="nav-btn nav-btn--menu" aria-label="Menu" aria-expanded="false" aria-controls="nav-menu"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 8h16M4 16h16"/></svg></button>
     </div>
   </nav>
+  <div id="nav-menu" class="nav-panel nav-panel--menu glass glass--panel" hidden>
+    <ul class="menu-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../writing.html" aria-current="page">Writing</a></li>
+      <li><a href="../work.html">Work</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../contact.html">Contact</a></li>
+    </ul>
+  </div>
+  <div id="nav-search-panel" class="nav-panel search-panel glass glass--panel" hidden>
+    <p><strong>Semantic search.</strong> Ask in plain English and it finds posts by meaning, not just matching words. Press Escape to close.</p>
+    <div class="suggests"><button type="button">Training for a marathon</button><button type="button">Moving a team to Kanban</button><button type="button">AI and the future of APIs</button></div>
+    <p class="search-note" aria-live="polite"></p>
+    <ul class="search-hits"></ul>
+    <a class="more" href="../search.html">Open the full search page →</a>
+  </div>
+</header>
+<main id="content" tabindex="-1">
+<article>
+  <header class="container">
+    <div class="post-head rise">
+      <a class="back" href="../writing.html"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>All writing</a>
+      <div class="post-hero-meta">Delivery, Agile &amp; Tech</div>
+      <h1 class="display post-title">Is Claude Mythos Ultron?</h1>
+      <p class="standfirst">When Anthropic announced their most powerful AI yet and kept it hidden from the public, my first thought was Tony Stark.</p>
+      <div class="post-byline"><span class="avatar avatar--lg" aria-hidden="true">HS</span><span><span><strong>Harrison Smith</strong></span><span class="muted"><time datetime="2026-05-30">30 May 2026</time> ~ 6 min read</span></span></div>
+    </div>
+  </header>
+  <figure class="container cover">
+    <div class="sd" role="img" aria-label="Diagram: several AI models released to the public, and Claude Mythos kept back behind a lock.">
+<div class="sd-panel"><span class="sd-label">Released to the public</span>
+<div class="sd-row"><span class="sd-node sd-node--a3">Model</span><span class="sd-node sd-node--a3">Model</span><span class="sd-node sd-node--a3">Model</span></div>
+<span class="sd-cap">The AI we all get to use.</span></div><svg class="sd-arrow" aria-hidden="true" width="64" height="24" viewBox="0 0 64 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h58M50 3l10 9-10 9"/></svg>
+<div class="sd-panel"><span class="sd-label sd-label--accent">Kept back</span>
+<span class="sd-node sd-node--deep"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;margin-right:6px"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>Claude Mythos</span>
+<span class="sd-cap">Anthropic's most powerful model yet, held back from the public.</span></div>
+    </div>
+  </figure>
+  <div class="container post-layout">
+    <nav class="toc toc-side glass" aria-label="On this page">
+      <p class="kicker">On this page</p>
+      <ol><li><a href="#so-what-actually-is-claude-mythos">So what actually is Claude Mythos?</a></li><li><a href="#what-is-project-glasswing">What is Project Glasswing?</a></li><li><a href="#why-has-it-caused-controversy">Why has it caused controversy?</a></li><li><a href="#the-positives-and-they-re-significant">The positives, and they're significant</a></li><li><a href="#the-part-that-sticks-with-me">The part that sticks with me</a></li><li><a href="#so-is-it-ultron">So, is it Ultron?</a></li></ol>
+    </nav>
+    <div>
+      <details class="toc toc-inline">
+        <summary>On this page <svg class="chev" aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></summary>
+        <ol><li><a href="#so-what-actually-is-claude-mythos">So what actually is Claude Mythos?</a></li><li><a href="#what-is-project-glasswing">What is Project Glasswing?</a></li><li><a href="#why-has-it-caused-controversy">Why has it caused controversy?</a></li><li><a href="#the-positives-and-they-re-significant">The positives, and they're significant</a></li><li><a href="#the-part-that-sticks-with-me">The part that sticks with me</a></li><li><a href="#so-is-it-ultron">So, is it Ultron?</a></li></ol>
+      </details>
+      <div class="post-content">
 
-  <div class="container" id="main-content">
-    <div class="post-content">
-
-      <div class="post-hero animate-in">
-        <a href="../writing.html" style="font-size:13px;color:var(--color-text-muted);display:inline-block;margin-bottom:20px;">← Back to all posts</a>
-        <h1>Is Claude Mythos Ultron?</h1>
-        <div class="post-hero-meta">
-          <span class="tag tag-uni">University &amp; Life</span>
-          <span>30 May 2026</span>
-          <span>·</span>
-          <span>6 min read</span>
-        </div>
-      </div>
-
-      <div class="animate-in delay-1">
 
         <p>Picture the scene. Tony Stark builds the most powerful AI the world has ever seen, gives it access to everything, and then acts mildly surprised when things go sideways. The Avengers spend the rest of the film cleaning up the mess.</p>
 
@@ -88,7 +123,7 @@
 
         <p>Before we get into it, this isn't a doom piece. I'm not here to tell you the robots are coming. What I am going to do is explain what Claude Mythos actually is, why it's caused a stir, and ask the question I keep coming back to: are we building the right things, or just the most impressive ones?</p>
 
-        <h2>So what actually is Claude Mythos?</h2>
+        <h2 id="so-what-actually-is-claude-mythos">So what actually is Claude Mythos?</h2>
 
         <p>If you're not deep in the AI world (and most people aren't), Claude is the AI made by a company called Anthropic. Think of it like a very capable digital assistant. Claude Mythos is the latest and most powerful version of that AI. The name comes from the Ancient Greek word for "utterance" or "narrative" — the stories civilisations used to make sense of the world. Make of that what you will.</p>
 
@@ -96,7 +131,7 @@
 
         <p>If Jarvis was the helpful, charming AI that quietly kept everything running in the background, this is what Jarvis would look like if you turned the dial up to eleven and gave it admin access to the internet.</p>
 
-        <h2>What is Project Glasswing?</h2>
+        <h2 id="what-is-project-glasswing">What is Project Glasswing?</h2>
 
         <p>Project Glasswing is the reason Mythos exists in its current form. Anthropic brought together some of the biggest names in tech — AWS, Apple, Microsoft, Google, Cisco, CrowdStrike, NVIDIA, JPMorganChase and others — with one goal: use Claude Mythos to find dangerous vulnerabilities in the world's software before the bad guys do.</p>
 
@@ -106,7 +141,7 @@
 
         <p>That's genuinely extraordinary. It's also the bit that makes you put the kettle on and stare out the window for a minute.</p>
 
-        <h2>Why has it caused controversy?</h2>
+        <h2 id="why-has-it-caused-controversy">Why has it caused controversy?</h2>
 
         <p>The controversy isn't really about Mythos being dangerous in itself. Anthropic have been very deliberate about keeping it out of public hands. The debate is more about what it represents.</p>
 
@@ -116,7 +151,7 @@
 
         <p>There's also the "race to the top" problem. AI development moves fast. Other labs are building their own versions. The concern isn't that Anthropic misuse Mythos. It's that by pushing the frontier this far, they signal to everyone else that this is the new bar. And not everyone building towards that bar has the same commitment to doing it carefully.</p>
 
-        <h2>The positives, and they're significant</h2>
+        <h2 id="the-positives-and-they-re-significant">The positives, and they're significant</h2>
 
         <p>It would be easy to write a piece that's all hand-wringing and no substance. So let's be fair.</p>
 
@@ -128,7 +163,7 @@
 
         <p>And that's where I land on the "excited" side of this. AI-assisted cancer detection. Machines that can diagnose rare conditions before symptoms appear. Software that secures the systems keeping patients alive. That's the version of this story I want to be true.</p>
 
-        <h2>The part that sticks with me</h2>
+        <h2 id="the-part-that-sticks-with-me">The part that sticks with me</h2>
 
         <p>Here's my honest take.</p>
 
@@ -140,7 +175,7 @@
 
         <p>That's not a criticism of Anthropic specifically. It's a broader question about the trajectory we're on.</p>
 
-        <h2>So, is it Ultron?</h2>
+        <h2 id="so-is-it-ultron">So, is it Ultron?</h2>
 
         <p>Not quite. Ultron decided humanity was the problem and acted accordingly. Mythos hasn't gone rogue, and there's no sign it's about to. The people building it are, by all accounts, trying to do the right thing.</p>
 
@@ -153,28 +188,60 @@
         <p>But I think the fact that we're asking it is probably a good sign.</p>
 
         <p><em>What do you think? Is the defensive case for something like Mythos convincing enough, or does the existence of it make you uneasy regardless? I'd genuinely like to know. Find me on <a href="https://www.linkedin.com/in/harrison-smith-22456b268" target="_blank" rel="noopener">LinkedIn</a>.</em></p>
-
       </div>
-
+      <div class="post-end">
+        <div class="tags"><a class="s-delivery" href="../writing.html?shelf=delivery">Delivery, Agile &amp; Tech</a></div>
+        <section class="author-card" aria-label="About the author">
+          <span class="avatar avatar--xl" aria-hidden="true">HS</span>
+          <div><h2>Written by Harrison Smith</h2><p class="muted">Delivery Manager in Wakefield, West Yorkshire. Writing about agile, university life, sport and whatever else is on my mind.</p></div>
+          <div class="btns"><a class="btn btn--primary" href="https://www.linkedin.com/in/harrison-smith-22456b268" target="_blank" rel="noopener">Connect on LinkedIn</a></div>
+        </section>
+        <section class="talk" aria-labelledby="talk-h">
+          <div><h2 id="talk-h">Join the conversation</h2><p>Got thoughts on this one? Come and tell me over on LinkedIn.</p></div>
+          <a class="btn btn--bright" href="https://www.linkedin.com/in/harrison-smith-22456b268" target="_blank" rel="noopener"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><path d="M2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>Comment on LinkedIn</a>
+        </section>
+      </div>
     </div>
   </div>
-
-  <footer class="footer">
-    <div class="footer-inner">
-      <div>
-        <p class="footer-name">Harrison Smith</p>
-        <p class="footer-role">Delivery Manager · Wakefield, West Yorkshire</p>
-        <p class="footer-tagline">Managing life and writing about it.</p>
-      </div>
-      <div class="footer-links">
-        <a href="https://www.linkedin.com/in/harrison-smith-22456b268" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="https://github.com/hlasmith" target="_blank" rel="noopener">GitHub</a>
-        <a href="../contact.html">Email</a>
-        <a href="../privacy.html">Privacy</a>
+</article>
+<section class="container keep" aria-labelledby="keep-h">
+  <h2 id="keep-h" class="section-title">Keep reading</h2>
+  <div class="keep-grid">
+    <a class="keep-card lift" href="mcp-vs-api.html"><span class="kicker">Delivery, Agile &amp; Tech</span><span class="t u-link">Are MCPs the new APIs?</span><span class="ui muted">6 June 2026</span></a>
+    <a class="keep-card lift" href="agency-to-consultancy.html"><span class="kicker">Delivery, Agile &amp; Tech</span><span class="t u-link">Why agencies that don't make this shift will get left behind</span><span class="ui muted">20 May 2026</span></a>
+    <a class="keep-card keep-card--deep lift" href="../writing.html"><span class="kicker">All writing</span><span class="t">Browse every post, or ask the archive a question</span><span class="ui"><strong>Go to Writing →</strong></span></a>
+  </div>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="foot-top">
+      <p class="foot-tag">Managing life and <em>writing about it.</em></p>
+      <div class="foot-card">
+        <p>I post new stuff regularly. Come say hello.</p>
+        <div class="btns"><a class="btn btn--bright" href="https://www.linkedin.com/in/harrison-smith-22456b268" target="_blank" rel="noopener">Connect on LinkedIn</a><a class="btn btn--on-deep" href="../contact.html">Get in touch</a></div>
       </div>
     </div>
-  </footer>
-
+    <div class="foot-row">
+      <ul class="foot-links">
+        <li><a href="../writing.html">Writing</a></li>
+        <li><a href="../work.html">Work</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../search.html">Search</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+      </ul>
+      <div class="socials">
+        <a href="https://www.linkedin.com/in/harrison-smith-22456b268" target="_blank" rel="noopener" aria-label="LinkedIn"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><path d="M2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
+        <a href="https://github.com/hlasmith" target="_blank" rel="noopener" aria-label="GitHub"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.9a3.4 3.4 0 0 0-.9-2.6c3.1-.4 6.4-1.5 6.4-7A5.4 5.4 0 0 0 20 4.8 5 5 0 0 0 19.9 1S18.7.6 16 2.5a13.4 13.4 0 0 0-7 0C6.3.6 5.1 1 5.1 1A5 5 0 0 0 5 4.8a5.4 5.4 0 0 0-1.5 3.7c0 5.5 3.3 6.6 6.4 7a3.4 3.4 0 0 0-.9 2.6V22"/></svg></a>
+        <a href="../contact.html" aria-label="Email"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></a>
+      </div>
+    </div>
+    <div class="foot-base">
+      <span>Harrison Smith · Delivery Manager · Wakefield, West Yorkshire</span>
+      <span><a href="../privacy.html">Privacy</a><a href="#top">Back to top ↑</a></span>
+    </div>
+  </div>
+</footer>
   <!-- Microsoft Clarity -->
   <script type="text/javascript">
     (function(c,l,a,r,i,t,y){

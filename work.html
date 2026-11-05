@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#F5F2EB">
+  <meta name="theme-color" content="#EEF3F6">
   <script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.setAttribute("data-theme",t);}catch(e){}</script>
   <title>Work — Harrison Smith</title>
   <meta name="description" content="Selected projects and delivery work by Harrison Smith — website rebuilds, NHS trust work, AI proof of concepts, and the approach behind them.">
@@ -17,152 +17,170 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://www.clarity.ms">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700&family=DM+Serif+Display&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;0,6..96,700;1,6..96,500;1,6..96,700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=Public+Sans:wght@400;500;600;700;800&display=swap">
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
 </head>
-<body>
-  <a href="#main-content" class="skip-link">Skip to main content</a>
-
-  <nav class="nav">
-    <div class="nav-inner">
-      <a href="index.html" class="nav-logo">Harrison Smith</a>
-      <div class="nav-right">
-        <button class="nav-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="writing.html">Writing</a></li>
-          <li><a href="search.html">Search</a></li>
-          <li><a href="work.html" class="active" aria-current="page">Work</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <div class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode" role="button" tabindex="0"></div>
-      </div>
+<body data-base="">
+  <a href="#content" class="skip-link">Skip to content</a>
+<header class="nav" id="top">
+  <nav class="nav-bar" aria-label="Main">
+    <a class="nav-logo glass" href="index.html" aria-label="hlasmith, home">hlasmith<span>.</span></a>
+    <ul class="nav-links glass">
+      <li><a href="writing.html">Writing</a></li>
+      <li><a href="work.html" aria-current="page">Work</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <form class="nav-search glass glass--panel" role="search" action="search.html">
+      <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+      <label for="nav-q" class="visually-hidden">Search the archive</label>
+      <input id="nav-q" name="q" type="search" maxlength="200" placeholder="Ask the archive anything" autocomplete="off">
+      <button type="button" class="nav-btn nav-search-close" aria-label="Close search"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </form>
+    <div class="nav-actions">
+      <button type="button" class="nav-btn glass nav-search-open" aria-label="Search the archive" aria-expanded="false" aria-controls="nav-search-panel"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></button>
+      <button type="button" class="nav-btn glass nav-theme" aria-label="Dark mode" aria-pressed="false"><svg class="i-moon" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg><svg class="i-sun" aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+      <button type="button" class="nav-btn nav-btn--menu" aria-label="Menu" aria-expanded="false" aria-controls="nav-menu"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 8h16M4 16h16"/></svg></button>
     </div>
   </nav>
-
-  <div class="container" id="main-content">
-    <div class="page-header animate-in">
-      <p class="page-header-label">Work</p>
-      <h1>Projects and My Delivery Approach.</h1>
-      <p>I adapt to every project, client and team. Here's what stays constant.</p>
+  <div id="nav-menu" class="nav-panel nav-panel--menu glass glass--panel" hidden>
+    <ul class="menu-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="writing.html">Writing</a></li>
+      <li><a href="work.html" aria-current="page">Work</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+  <div id="nav-search-panel" class="nav-panel search-panel glass glass--panel" hidden>
+    <p><strong>Semantic search.</strong> Ask in plain English and it finds posts by meaning, not just matching words. Press Escape to close.</p>
+    <div class="suggests"><button type="button">Training for a marathon</button><button type="button">Moving a team to Kanban</button><button type="button">AI and the future of APIs</button></div>
+    <p class="search-note" aria-live="polite"></p>
+    <ul class="search-hits"></ul>
+    <a class="more" href="search.html">Open the full search page →</a>
+  </div>
+</header>
+<main id="content" tabindex="-1">
+<div class="container page-end">
+  <header class="page-head rise">
+    <p class="kicker">Work</p>
+    <h1 class="display" style="font-size:clamp(44px,7.5vw,92px);line-height:.98">Projects and my delivery approach.</h1>
+    <p class="lede">I adapt to every project, client and team. Here's what stays constant.</p>
+  </header>
+  <section class="stats" aria-label="At a glance">
+    <div><p class="stat">~£2.5m</p><p>of digital projects delivered</p></div>
+    <div><p class="stat">~4 years</p><p class="muted">as a Delivery Manager</p></div>
+    <div><p class="stat">44/45</p><p class="muted">police forces onboarded onto Single Online Home</p></div>
+  </section>
+  <section class="section" aria-labelledby="approach-h">
+    <h2 id="approach-h" class="section-title">My approach</h2>
+    <ol class="approach" role="list">
+      <li><span class="stat" aria-hidden="true">01</span><h3>People first, process second</h3><p>Frameworks serve the team, not the other way around. I get to know how people work best and build delivery around them.</p></li>
+      <li><span class="stat" aria-hidden="true">02</span><h3>Transparency and honesty</h3><p>I say what needs saying. If something isn't working or a timeline is at risk, the client hears it from me early.</p></li>
+      <li><span class="stat" aria-hidden="true">03</span><h3>Continuous improvement</h3><p>Always looking for a better way. Process, tooling, communication, ways of working. If it can be improved, I want to find it.</p></li>
+      <li><span class="stat" aria-hidden="true">04</span><h3>Data-informed decisions</h3><p>Cycle time, throughput, capacity, trends. When you have evidence, you have better conversations and better decisions.</p></li>
+      <li><span class="stat" aria-hidden="true">05</span><h3>Innovation and curiosity</h3><p>Genuinely curious about how things can be done differently. I push for innovation where it adds real value, not just for the sake of it.</p></li>
+      <li><span class="stat" aria-hidden="true">06</span><h3>Leading by example</h3><p>I set the standard I expect. If I'm asking the team to keep the board updated, mine is updated first.</p></li>
+    </ol>
+  </section>
+  <section class="section" aria-labelledby="career-h">
+    <h2 id="career-h" class="section-title">Career &amp; projects</h2>
+    <div class="employer-next">
+      <span class="badge">FROM 9 NOV 2026</span>
+      <div><h3 class="employer-name">Hippo Digital</h3><p class="ui muted" style="margin-top:4px;font-size:15px">Delivery Manager · a new chapter, projects to follow</p></div>
     </div>
-
-    <div class="section animate-in delay-1">
-      <h2 class="section-label">Approach</h2>
-      <div class="approach-grid">
-        <div class="approach-card">
-          <span class="approach-number">01</span>
-          <h3>People first, process second</h3>
-          <p>Frameworks serve the team, not the other way around. I get to know how people work best and build delivery around them.</p>
-        </div>
-        <div class="approach-card">
-          <span class="approach-number">02</span>
-          <h3>Transparency and honesty</h3>
-          <p>I say what needs saying. If something isn't working or a timeline is at risk, the client hears it from me early.</p>
-        </div>
-        <div class="approach-card">
-          <span class="approach-number">03</span>
-          <h3>Continuous improvement</h3>
-          <p>Always looking for a better way. Process, tooling, communication, ways of working. If it can be improved, I want to find it.</p>
-        </div>
-        <div class="approach-card">
-          <span class="approach-number">04</span>
-          <h3>Data-informed decisions</h3>
-          <p>Cycle time, throughput, capacity, trends. When you have evidence, you have better conversations and better decisions.</p>
-        </div>
-        <div class="approach-card">
-          <span class="approach-number">05</span>
-          <h3>Innovation and curiosity</h3>
-          <p>Genuinely curious about how things can be done differently. I push for innovation where it adds real value, not just for the sake of it.</p>
-        </div>
-        <div class="approach-card">
-          <span class="approach-number">06</span>
-          <h3>Leading by example</h3>
-          <p>I set the standard I expect. If I'm asking the team to keep the board updated, mine is updated first.</p>
-        </div>
+    <div class="employer">
+      <div class="employer-head"><h3 class="employer-name">CDS</h3><p class="ui muted" style="font-size:15px">Delivery Manager · nearly 4 years · around £2.5 million of projects delivered</p></div>
+      <div id="sector-filter" class="chips" role="group" aria-label="Filter by sector" data-filter-group="projects" data-status="proj-status" data-param="sector" style="margin-top:18px">
+        <button type="button" class="chip" aria-pressed="true" data-value="all" data-label="All">All<span>10</span></button>
+        <button type="button" class="chip" aria-pressed="false" data-value="pub" data-label="Public sector">Public sector<span>4</span></button>
+        <button type="button" class="chip" aria-pressed="false" data-value="health" data-label="Healthcare">Healthcare<span>2</span></button>
+        <button type="button" class="chip" aria-pressed="false" data-value="fin" data-label="Financial services">Financial services<span>1</span></button>
+        <button type="button" class="chip" aria-pressed="false" data-value="energy" data-label="Energy services">Energy services<span>1</span></button>
+        <button type="button" class="chip" aria-pressed="false" data-value="internal" data-label="Internal">Internal<span>1</span></button>
+        <button type="button" class="chip" aria-pressed="false" data-value="personal" data-label="Personal">Personal<span>1</span></button>
+      </div>
+      <p id="proj-status" class="status" aria-live="polite" data-noun="projects" data-all="10 projects. Select one to read more.">10 projects. Select one to read more.</p>
+      <ul id="projects" class="projects" role="list">
+        <li data-shelf="fin">
+          <h4><button type="button" class="proj-btn" aria-expanded="false" aria-controls="proj-0"><span class="shelf-dot" style="background:var(--a1)" aria-hidden="true"></span><span><span class="proj-title">Corporate website redesign &amp; client portal build</span><span class="proj-meta">Financial services · 2023 to 2026</span></span><span class="proj-value">c. £500,000 a year</span><svg class="chev" aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button></h4>
+          <div id="proj-0" class="proj-panel" hidden><p>My flagship account. Led the delivery of a full corporate website redesign alongside a separate client portal build, both running in parallel. Managed the transition from Scrum to Kanban mid-project to better suit the team's working patterns.</p><div class="ui"><strong>c. £500,000 a year</strong><a href="blog/scrum-to-kanban.html">Read: Scrum to Kanban →</a></div></div>
+        </li>
+        <li data-shelf="health">
+          <h4><button type="button" class="proj-btn" aria-expanded="false" aria-controls="proj-1"><span class="shelf-dot" style="background:var(--a3)" aria-hidden="true"></span><span><span class="proj-title">NHS trust website redesign</span><span class="proj-meta">Healthcare · 2024</span></span><span class="proj-value">c. £100,000</span><svg class="chev" aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button></h4>
+          <div id="proj-1" class="proj-panel" hidden><p>Managed the redesign of a leading NHS trust's public-facing website from discovery right through to project closure. Worked closely with clinical and communications teams to improve accessibility and user experience.</p><div class="ui"><strong>c. £100,000</strong></div></div>
+        </li>
+        <li data-shelf="pub">
+          <h4><button type="button" class="proj-btn" aria-expanded="false" aria-controls="proj-2"><span class="shelf-dot" style="background:var(--deep)" aria-hidden="true"></span><span><span class="proj-title">AI proof of concept</span><span class="proj-meta">Public sector · 2025</span></span><span class="proj-value">c. £50,000 discovery</span><svg class="chev" aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button></h4>
+          <div id="proj-2" class="proj-panel" hidden><p>Oversaw an AI proof-of-concept for a public sector client, exploring practical applications of AI within their existing workflows. Led the discovery phase and outlined a build-phase roadmap of circa £500,000.</p><div class="ui"><strong>c. £50,000 discovery</strong></div></div>
+        </li>
+        <li data-shelf="energy">
+          <h4><button type="button" class="proj-btn" aria-expanded="false" aria-controls="proj-3"><span class="shelf-dot" style="background:var(--a2)" aria-hidden="true"></span><span><span class="proj-title">Cloudflare configuration &amp; managed service</span><span class="proj-meta">Energy services · 2024</span></span><span class="proj-value">c. £80,000</span><svg class="chev" aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button></h4>
+          <div id="proj-3" class="proj-panel" hidden><p>Delivered a Cloudflare configuration project covering app services, Zero Trust security, and managed service setup for an energy services client.</p><div class="ui"><strong>c. £80,000</strong></div></div>
+        </li>
+        <li data-shelf="pub">
+          <h4><button type="button" class="proj-btn" aria-expanded="false" aria-controls="proj-4"><span class="shelf-dot" style="background:var(--deep)" aria-hidden="true"></span><span><span class="proj-title">Case management system</span><span class="proj-meta">Public sector · 2025 to 2026</span></span><span class="proj-value">c. £350,000</span><svg class="chev" aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button></h4>
+          <div id="proj-4" class="proj-panel" hidden><p>First ever Appian project, working as the Scrum Master on a digital forensics case management system for a public sector client. Built on the Appian low-code platform.</p><div class="ui"><strong>c. £350,000</strong></div></div>
+        </li>
+        <li data-shelf="health">
+          <h4><button type="button" class="proj-btn" aria-expanded="false" aria-controls="proj-5"><span class="shelf-dot" style="background:var(--a3)" aria-hidden="true"></span><span><span class="proj-title">NHS trust continuous improvement</span><span class="proj-meta">Healthcare · 2023 to 2025</span></span><span class="proj-value">c. £150,000</span><svg class="chev" aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button></h4>
+          <div id="proj-5" class="proj-panel" hidden><p>Continuous improvement and feature development on a leading NHS trust's website. Multiple change requests delivered over two years.</p><div class="ui"><strong>c. £150,000</strong></div></div>
+        </li>
+        <li data-shelf="pub">
+          <h4><button type="button" class="proj-btn" aria-expanded="false" aria-controls="proj-6"><span class="shelf-dot" style="background:var(--deep)" aria-hidden="true"></span><span><span class="proj-title">Government department security remediation</span><span class="proj-meta">Public sector · 2023</span></span><span class="proj-value">c. £40,000</span><svg class="chev" aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button></h4>
+          <div id="proj-6" class="proj-panel" hidden><p>Small change requests for a central government department, focused on penetration test remediations and security improvements.</p><div class="ui"><strong>c. £40,000</strong></div></div>
+        </li>
+        <li data-shelf="internal">
+          <h4><button type="button" class="proj-btn" aria-expanded="false" aria-controls="proj-7"><span class="shelf-dot" style="background:var(--a3)" aria-hidden="true"></span><span><span class="proj-title">Internal AI search tool</span><span class="proj-meta">Internal · 2024</span></span><span class="proj-value">c. £45,000</span><svg class="chev" aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button></h4>
+          <div id="proj-7" class="proj-panel" hidden><p>Led an internal innovation project to build a semantic search and AI-powered search tool for the CDS website, working with Cloudflare.</p><div class="ui"><strong>c. £45,000</strong></div></div>
+        </li>
+        <li data-shelf="pub">
+          <h4><button type="button" class="proj-btn" aria-expanded="false" aria-controls="proj-8"><span class="shelf-dot" style="background:var(--deep)" aria-hidden="true"></span><span><span class="proj-title">Single Online Home force onboarding</span><span class="proj-meta">Public sector · 2023 to 2025</span></span><span class="proj-value">c. £300,000</span><svg class="chev" aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button></h4>
+          <div id="proj-8" class="proj-panel" hidden><p>Managed the onboarding of police forces onto the Single Online Home shared services platform, working with Cloudflare. 44 out of 45 forces completed.</p><div class="ui"><strong>c. £300,000</strong></div></div>
+        </li>
+        <li data-shelf="personal">
+          <h4><button type="button" class="proj-btn" aria-expanded="false" aria-controls="proj-9"><span class="shelf-dot" style="background:var(--a2)" aria-hidden="true"></span><span><span class="proj-title">This website</span><span class="proj-meta">Personal · 2026</span></span><span class="proj-value">Built from scratch</span><svg class="chev" aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button></h4>
+          <div id="proj-9" class="proj-panel" hidden><p>Built this personal site from scratch using HTML, CSS and JavaScript. Designed iteratively with Claude as a UX, content, and accessibility consultant. Hosted on Cloudflare Pages with automatic deployments from GitHub.</p><div class="ui"><strong>Built from scratch</strong></div></div>
+        </li>
+      </ul>
+      <button type="button" id="projects-more" class="btn btn--outline" style="margin-top:20px">Show all <span>10</span> projects <svg class="chev" aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button>
+    </div>
+  </section>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="foot-top">
+      <p class="foot-tag">Managing life and <em>writing about it.</em></p>
+      <div class="foot-card">
+        <p>I post new stuff regularly. Come say hello.</p>
+        <div class="btns"><a class="btn btn--bright" href="https://www.linkedin.com/in/harrison-smith-22456b268" target="_blank" rel="noopener">Connect on LinkedIn</a><a class="btn btn--on-deep" href="contact.html">Get in touch</a></div>
       </div>
     </div>
-
-    <div class="section animate-in delay-2">
-      <h2 class="section-label">Projects</h2>
-      <p class="approach-intro">A selection of the projects I've been involved in as a Delivery Manager at CDS. In total, across nearly 4 years of delivering, I have been responsible for the delivery of around £2.5 million worth of projects.</p>
+    <div class="foot-row">
+      <ul class="foot-links">
+        <li><a href="writing.html">Writing</a></li>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="search.html">Search</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="socials">
+        <a href="https://www.linkedin.com/in/harrison-smith-22456b268" target="_blank" rel="noopener" aria-label="LinkedIn"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><path d="M2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
+        <a href="https://github.com/hlasmith" target="_blank" rel="noopener" aria-label="GitHub"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.9a3.4 3.4 0 0 0-.9-2.6c3.1-.4 6.4-1.5 6.4-7A5.4 5.4 0 0 0 20 4.8 5 5 0 0 0 19.9 1S18.7.6 16 2.5a13.4 13.4 0 0 0-7 0C6.3.6 5.1 1 5.1 1A5 5 0 0 0 5 4.8a5.4 5.4 0 0 0-1.5 3.7c0 5.5 3.3 6.6 6.4 7a3.4 3.4 0 0 0-.9 2.6V22"/></svg></a>
+        <a href="contact.html" aria-label="Email"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></a>
+      </div>
     </div>
-
-    <div class="work-grid animate-in delay-3">
-      <div class="work-card">
-        <h3>Corporate website redesign &amp; client portal build</h3>
-        <p class="work-card-meta">Financial services · 2023 – Ongoing</p>
-        <p>My flagship account. Led the delivery of a full corporate website redesign alongside a separate client portal build, both running in parallel. Managed the transition from Scrum to Kanban mid-project to better suit the team's working patterns. Multiple change requests packaged up and delivered continuously. Circa £500,000 per year.</p>
-      </div>
-      <div class="work-card">
-        <h3>NHS trust website redesign</h3>
-        <p class="work-card-meta">Healthcare · 2024</p>
-        <p>Managed the redesign of a leading NHS trust's public-facing website from discovery right through to project closure. Worked closely with clinical and communications teams to improve accessibility and user experience. Circa £100,000 project.</p>
-      </div>
-      <div class="work-card">
-        <h3>AI proof of concept</h3>
-        <p class="work-card-meta">Public sector · 2025</p>
-        <p>Oversaw an AI proof-of-concept for a public sector client, exploring practical applications of AI within their existing workflows. Led the discovery phase and outlined a build-phase roadmap of circa £500,000 to implement the proof-of-concept solutions across the organisation. Circa £50,000 discovery project.</p>
-      </div>
-      <div class="work-card">
-        <h3>Cloudflare configuration &amp; managed service</h3>
-        <p class="work-card-meta">Energy services · 2024</p>
-        <p>Delivered a Cloudflare configuration project covering app services, Zero Trust security, and managed service setup for an energy services client. Circa £80,000 project completed in 2024.</p>
-      </div>
-      <div class="work-card">
-        <h3>Case management system</h3>
-        <p class="work-card-meta">Public sector · Ongoing</p>
-        <p>First ever Appian project, working as the Scrum Master on a digital forensics case management system for a public sector client. Built on the Appian low-code platform. Circa £350,000 project.</p>
-      </div>
-      <div class="work-card">
-        <h3>NHS trust continuous improvement</h3>
-        <p class="work-card-meta">Healthcare · 2023 – 2025</p>
-        <p>Continuous improvement and feature development on a leading NHS trust's website. Multiple change requests delivered over two years, equating to circa £150,000 of work.</p>
-      </div>
-      <div class="work-card">
-        <h3>Government department security remediation</h3>
-        <p class="work-card-meta">Public sector · 2023</p>
-        <p>Small change requests for a central government department, focused on penetration test remediations and security improvements. Circa £40,000 of work.</p>
-      </div>
-      <div class="work-card">
-        <h3>Internal AI search tool</h3>
-        <p class="work-card-meta">Internal · 2024</p>
-        <p>Led an internal innovation project to build a semantic search and AI-powered search tool for the CDS website, working with Cloudflare. Circa £45,000 project.</p>
-      </div>
-      <div class="work-card">
-        <h3>Single Online Home force onboarding</h3>
-        <p class="work-card-meta">Public sector · 2023 – 2025</p>
-        <p>Managed the onboarding of police forces onto the Single Online Home shared services platform, working with Cloudflare. 44 out of 45 forces completed. Circa £300,000 of work delivered over two years.</p>
-      </div>
-      <div class="work-card">
-        <h3>This website</h3>
-        <p class="work-card-meta">Personal · 2026</p>
-        <p>Built this personal site from scratch using HTML, CSS and JavaScript. Designed iteratively with Claude as a UX, content, and accessibility consultant. Hosted on Cloudflare Pages with automatic deployments from GitHub. Dark theme with light mode toggle, fully responsive.</p>
-      </div>
+    <div class="foot-base">
+      <span>Harrison Smith · Delivery Manager · Wakefield, West Yorkshire</span>
+      <span><a href="privacy.html">Privacy</a><a href="#top">Back to top ↑</a></span>
     </div>
   </div>
-
-  <footer class="footer">
-    <div class="footer-inner">
-      <div>
-        <p class="footer-name">Harrison Smith</p>
-        <p class="footer-role">Delivery Manager · Wakefield, West Yorkshire</p>
-        <p class="footer-tagline">Managing life and writing about it.</p>
-      </div>
-      <div class="footer-links">
-        <a href="https://www.linkedin.com/in/harrison-smith-22456b268" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="https://github.com/hlasmith" target="_blank" rel="noopener">GitHub</a>
-        <a href="contact.html">Email</a>
-        <a href="privacy.html">Privacy</a>
-      </div>
-    </div>
-  </footer>
-
+</footer>
   <!-- Microsoft Clarity -->
   <script type="text/javascript">
     (function(c,l,a,r,i,t,y){

@@ -54,7 +54,7 @@ function parsePost(html) {
 
   const start = h.search(/class="post-content"/i);
   let body = start >= 0 ? h.slice(start) : h;
-  const footer = body.search(/class="footer-inner"|<footer/i);
+  const footer = body.search(/class="post-end"|class="footer-inner"|<footer/i);
   if (footer >= 0) body = body.slice(0, footer);
   const text = decode(body.replace(/<[^>]+>/g, " ")).replace(/\s+/g, " ").trim();
   return { title, category, snippet, text };

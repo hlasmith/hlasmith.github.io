@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#F5F2EB">
+  <meta name="theme-color" content="#EEF3F6">
   <script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.setAttribute("data-theme",t);}catch(e){}</script>
   <title>From 'piece of cake' to shin splints — Harrison Smith</title>
   <meta name="description" content="From naïve optimism to shin splints and cold January mornings — why I'm running the Leeds Half Marathon and York Full Marathon in 2026.">
@@ -17,12 +17,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://www.clarity.ms">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700&family=DM+Serif+Display&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;0,6..96,700;1,6..96,500;1,6..96,700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=Public+Sans:wght@400;500;600;700;800&display=swap">
   <link rel="stylesheet" href="../css/style.css">
   <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16.png">
   <link rel="apple-touch-icon" href="../apple-touch-icon.png">
-
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -42,52 +41,84 @@
     }
   }
   </script>
-
 </head>
-<body>
-  <a href="#main-content" class="skip-link">Skip to main content</a>
-
-  <nav class="nav">
-    <div class="nav-inner">
-      <a href="../index.html" class="nav-logo">Harrison Smith</a>
-      <div class="nav-right">
-        <button class="nav-toggle" aria-label="Toggle navigation">
-          <span></span><span></span><span></span>
-        </button>
-        <ul class="nav-links">
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="../about.html">About</a></li>
-          <li><a href="../writing.html" class="active" aria-current="page">Writing</a></li>
-          <li><a href="../search.html">Search</a></li>
-          <li><a href="../work.html">Work</a></li>
-          <li><a href="../contact.html">Contact</a></li>
-        </ul>
-        <div class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode" role="button" tabindex="0"></div>
-      </div>
+<body data-base="../">
+  <a href="#content" class="skip-link">Skip to content</a>
+  <div class="progress" aria-hidden="true"></div>
+<header class="nav" id="top">
+  <nav class="nav-bar" aria-label="Main">
+    <a class="nav-logo glass" href="../index.html" aria-label="hlasmith, home">hlasmith<span>.</span></a>
+    <ul class="nav-links glass">
+      <li><a href="../writing.html" aria-current="page">Writing</a></li>
+      <li><a href="../work.html">Work</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../contact.html">Contact</a></li>
+    </ul>
+    <form class="nav-search glass glass--panel" role="search" action="../search.html">
+      <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+      <label for="nav-q" class="visually-hidden">Search the archive</label>
+      <input id="nav-q" name="q" type="search" maxlength="200" placeholder="Ask the archive anything" autocomplete="off">
+      <button type="button" class="nav-btn nav-search-close" aria-label="Close search"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </form>
+    <div class="nav-actions">
+      <button type="button" class="nav-btn glass nav-search-open" aria-label="Search the archive" aria-expanded="false" aria-controls="nav-search-panel"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></button>
+      <button type="button" class="nav-btn glass nav-theme" aria-label="Dark mode" aria-pressed="false"><svg class="i-moon" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg><svg class="i-sun" aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+      <button type="button" class="nav-btn nav-btn--menu" aria-label="Menu" aria-expanded="false" aria-controls="nav-menu"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 8h16M4 16h16"/></svg></button>
     </div>
   </nav>
+  <div id="nav-menu" class="nav-panel nav-panel--menu glass glass--panel" hidden>
+    <ul class="menu-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../writing.html" aria-current="page">Writing</a></li>
+      <li><a href="../work.html">Work</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../contact.html">Contact</a></li>
+    </ul>
+  </div>
+  <div id="nav-search-panel" class="nav-panel search-panel glass glass--panel" hidden>
+    <p><strong>Semantic search.</strong> Ask in plain English and it finds posts by meaning, not just matching words. Press Escape to close.</p>
+    <div class="suggests"><button type="button">Training for a marathon</button><button type="button">Moving a team to Kanban</button><button type="button">AI and the future of APIs</button></div>
+    <p class="search-note" aria-live="polite"></p>
+    <ul class="search-hits"></ul>
+    <a class="more" href="../search.html">Open the full search page →</a>
+  </div>
+</header>
+<main id="content" tabindex="-1">
+<article>
+  <header class="container">
+    <div class="post-head rise">
+      <a class="back" href="../writing.html"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>All writing</a>
+      <div class="post-hero-meta">Sports</div>
+      <h1 class="display post-title">From 'piece of cake' to shin splints: why I'm running a half and full marathon this year</h1>
+      <p class="standfirst">From naïve optimism to shin splints and cold January mornings — why I'm running the Leeds Half Marathon and York Full Marathon in 2026.</p>
+      <div class="post-byline"><span class="avatar avatar--lg" aria-hidden="true">HS</span><span><span><strong>Harrison Smith</strong></span><span class="muted"><time datetime="2026-05-08">8 May 2026</time> ~ 5 min read</span></span></div>
+    </div>
+  </header>
+  <figure class="container cover">
+    <div class="sd" role="img" aria-label="Diagram: a timeline from cold January mornings and shin splints to the Leeds Half Marathon and the York Full Marathon.">
+<div class="sd-panel"><span class="sd-label sd-label--accent">The road to two races</span>
+<div class="sd-row"><span class="sd-node">Cold January mornings</span><span class="sd-node sd-node--a2">Shin splints</span><span class="sd-node sd-node--a3">Leeds Half Marathon</span><span class="sd-node sd-node--a1">York Full Marathon</span></div>
+<span class="sd-cap">Running both in 2026, for Alzheimer's Research UK.</span></div>
+    </div>
+  </figure>
+  <div class="container post-layout">
+    <nav class="toc toc-side glass" aria-label="On this page">
+      <p class="kicker">On this page</p>
+      <ol><li><a href="#the-reality-check">The reality check</a></li><li><a href="#the-training">The training</a></li><li><a href="#why-i-m-running">Why I'm running</a></li><li><a href="#sunday">Sunday</a></li></ol>
+    </nav>
+    <div>
+      <details class="toc toc-inline">
+        <summary>On this page <svg class="chev" aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></summary>
+        <ol><li><a href="#the-reality-check">The reality check</a></li><li><a href="#the-training">The training</a></li><li><a href="#why-i-m-running">Why I'm running</a></li><li><a href="#sunday">Sunday</a></li></ol>
+      </details>
+      <div class="post-content">
 
-  <div class="container" id="main-content">
-    <div class="post-content">
-
-      <div class="post-hero animate-in">
-        <a href="../writing.html" style="font-size:13px;color:var(--color-text-muted);display:inline-block;margin-bottom:20px;">← Back to all posts</a>
-        <h1>From 'piece of cake' to shin splints: why I'm running a half and full marathon this year</h1>
-        <div class="post-hero-meta">
-          <span class="tag tag-sports">Sports</span>
-          <span>8 May 2026</span>
-          <span>·</span>
-          <span>5 min read</span>
-        </div>
-      </div>
-
-      <div class="animate-in delay-1">
 
         <p>Going into 2026, I wanted to set myself a new challenge. Something outside of work, outside of football, outside of the usual routine. Something that would genuinely push me. So naturally, as a naïve 22 year old who plays football most Saturdays, I thought: why not a marathon? How hard can it be?</p>
 
         <p>Very. The answer is very hard.</p>
 
-        <h2>The reality check</h2>
+        <h2 id="the-reality-check">The reality check</h2>
 
         <p>I'll be honest, when I first had the idea I genuinely thought my football fitness would carry me through. I've played my whole life, I can run around for 90 minutes no problem, surely that's comparable to running 13 or 26 miles in a straight line?</p>
 
@@ -102,7 +133,7 @@
 
         <p>Two races, two distances I've never attempted before, and about ten months to get myself from "plays 11 a side on a Saturday" to "can run 26.2 miles without collapsing."</p>
 
-        <h2>The training</h2>
+        <h2 id="the-training">The training</h2>
 
         <p>Training started in January. And if you've ever tried to build a running habit in a West Yorkshire January, you'll know exactly what I'm about to say.</p>
 
@@ -118,7 +149,7 @@
 
         <p>But here's the thing. Despite all of that, the improvement has been massive. I'm quicker, I'm fitter, and I can run distances now that would have seemed impossible back in January. The body adapts if you're consistent, even when consistency means dragging yourself out the door on days when every part of you wants to stay in bed.</p>
 
-        <h2>Why I'm running</h2>
+        <h2 id="why-i-m-running">Why I'm running</h2>
 
         <p>Completing a half and full marathon would be a huge personal achievement. I've never done anything like this before and the challenge alone is enough motivation to keep training. But there's something bigger than personal ambition behind this.</p>
 
@@ -134,7 +165,7 @@
 
         <p>That's why I'm running for Alzheimer's Research UK. Not just for the personal challenge, but because this cause matters.</p>
 
-        <h2>Sunday</h2>
+        <h2 id="sunday">Sunday</h2>
 
         <p>In two days I'll be standing at the start line of the Leeds Half Marathon. Nervous, probably underprepared, definitely questioning my life choices again.</p>
 
@@ -145,28 +176,60 @@
         <p>If you'd like to support the cause, you can <a href="https://www.gofundme.com/f/alzheimers-research-run-for-a-cure" target="_blank" rel="noopener">donate through my GoFundMe page</a>. Every penny goes to Alzheimer's Research UK. And if you see me struggling around the streets of Leeds on Sunday, a cheer would go a long way.</p>
 
         <p>Thanks for reading. Now if you'll excuse me, I need to go and worry about Sunday.</p>
-
       </div>
-
+      <div class="post-end">
+        <div class="tags"><a class="s-sports" href="../writing.html?shelf=sports">Sports</a></div>
+        <section class="author-card" aria-label="About the author">
+          <span class="avatar avatar--xl" aria-hidden="true">HS</span>
+          <div><h2>Written by Harrison Smith</h2><p class="muted">Delivery Manager in Wakefield, West Yorkshire. Writing about agile, university life, sport and whatever else is on my mind.</p></div>
+          <div class="btns"><a class="btn btn--primary" href="https://www.linkedin.com/in/harrison-smith-22456b268" target="_blank" rel="noopener">Connect on LinkedIn</a></div>
+        </section>
+        <section class="talk" aria-labelledby="talk-h">
+          <div><h2 id="talk-h">Join the conversation</h2><p>Got thoughts on this one? Come and tell me over on LinkedIn.</p></div>
+          <a class="btn btn--bright" href="https://www.linkedin.com/in/harrison-smith-22456b268" target="_blank" rel="noopener"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><path d="M2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>Comment on LinkedIn</a>
+        </section>
+      </div>
     </div>
   </div>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="footer-inner">
-      <div>
-        <p class="footer-copy">&copy; 2026 Harrison Smith</p>
-        <p class="footer-tagline">Managing life and writing about it.</p>
-      </div>
-      <div class="footer-links">
-        <a href="https://www.linkedin.com/in/harrison-smith-22456b268" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="https://github.com/hlasmith" target="_blank" rel="noopener">GitHub</a>
-        <a href="../contact.html">Email</a>
-        <a href="../privacy.html">Privacy</a>
+</article>
+<section class="container keep" aria-labelledby="keep-h">
+  <h2 id="keep-h" class="section-title">Keep reading</h2>
+  <div class="keep-grid">
+    <a class="keep-card lift" href="leeds-half-marathon.html"><span class="kicker">Sports</span><span class="t u-link">1 hour 57 minutes. Half marathon. Done.</span><span class="ui muted">15 May 2026</span></a>
+    <a class="keep-card lift" href="mcp-vs-api.html"><span class="kicker">Delivery, Agile &amp; Tech</span><span class="t u-link">Are MCPs the new APIs?</span><span class="ui muted">6 June 2026</span></a>
+    <a class="keep-card keep-card--deep lift" href="../writing.html"><span class="kicker">All writing</span><span class="t">Browse every post, or ask the archive a question</span><span class="ui"><strong>Go to Writing →</strong></span></a>
+  </div>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="foot-top">
+      <p class="foot-tag">Managing life and <em>writing about it.</em></p>
+      <div class="foot-card">
+        <p>I post new stuff regularly. Come say hello.</p>
+        <div class="btns"><a class="btn btn--bright" href="https://www.linkedin.com/in/harrison-smith-22456b268" target="_blank" rel="noopener">Connect on LinkedIn</a><a class="btn btn--on-deep" href="../contact.html">Get in touch</a></div>
       </div>
     </div>
-  </footer>
-
+    <div class="foot-row">
+      <ul class="foot-links">
+        <li><a href="../writing.html">Writing</a></li>
+        <li><a href="../work.html">Work</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../search.html">Search</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+      </ul>
+      <div class="socials">
+        <a href="https://www.linkedin.com/in/harrison-smith-22456b268" target="_blank" rel="noopener" aria-label="LinkedIn"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><path d="M2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
+        <a href="https://github.com/hlasmith" target="_blank" rel="noopener" aria-label="GitHub"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.9a3.4 3.4 0 0 0-.9-2.6c3.1-.4 6.4-1.5 6.4-7A5.4 5.4 0 0 0 20 4.8 5 5 0 0 0 19.9 1S18.7.6 16 2.5a13.4 13.4 0 0 0-7 0C6.3.6 5.1 1 5.1 1A5 5 0 0 0 5 4.8a5.4 5.4 0 0 0-1.5 3.7c0 5.5 3.3 6.6 6.4 7a3.4 3.4 0 0 0-.9 2.6V22"/></svg></a>
+        <a href="../contact.html" aria-label="Email"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></a>
+      </div>
+    </div>
+    <div class="foot-base">
+      <span>Harrison Smith · Delivery Manager · Wakefield, West Yorkshire</span>
+      <span><a href="../privacy.html">Privacy</a><a href="#top">Back to top ↑</a></span>
+    </div>
+  </div>
+</footer>
   <!-- Microsoft Clarity -->
   <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
