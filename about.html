@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#F5F2EB">
+  <meta name="theme-color" content="#EEF3F6">
   <script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.setAttribute("data-theme",t);}catch(e){}</script>
   <title>About — Harrison Smith</title>
   <meta name="description" content="About Harrison Smith — Delivery Manager, Project Manager, and Scrum Master based in Wakefield, West Yorkshire.">
@@ -17,7 +17,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://www.clarity.ms">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700&family=DM+Serif+Display&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;0,6..96,700;1,6..96,500;1,6..96,700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=Public+Sans:wght@400;500;600;700;800&display=swap">
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
@@ -28,6 +28,7 @@
     "@type": "Person",
     "name": "Harrison Smith",
     "jobTitle": "Delivery Manager",
+    "worksFor": { "@type": "Organization", "name": "Hippo Digital" },
     "url": "https://hlasmith.co.uk/about.html",
     "image": "https://hlasmith.co.uk/avatar-512.png",
     "sameAs": [
@@ -42,81 +43,154 @@
     }
   }
   </script>
-
 </head>
-<body>
-  <a href="#main-content" class="skip-link">Skip to main content</a>
-
-  <nav class="nav">
-    <div class="nav-inner">
-      <a href="index.html" class="nav-logo">Harrison Smith</a>
-      <div class="nav-right">
-        <button class="nav-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html" class="active" aria-current="page">About</a></li>
-          <li><a href="writing.html">Writing</a></li>
-          <li><a href="search.html">Search</a></li>
-          <li><a href="work.html">Work</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <div class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode" role="button" tabindex="0"></div>
-      </div>
+<body data-base="">
+  <a href="#content" class="skip-link">Skip to content</a>
+<header class="nav" id="top">
+  <nav class="nav-bar" aria-label="Main">
+    <a class="nav-logo glass" href="index.html" aria-label="hlasmith, home">hlasmith<span>.</span></a>
+    <ul class="nav-links glass">
+      <li><a href="writing.html">Writing</a></li>
+      <li><a href="work.html">Work</a></li>
+      <li><a href="about.html" aria-current="page">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <form class="nav-search glass glass--panel" role="search" action="search.html">
+      <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+      <label for="nav-q" class="visually-hidden">Search the archive</label>
+      <input id="nav-q" name="q" type="search" maxlength="200" placeholder="Ask the archive anything" autocomplete="off">
+      <button type="button" class="nav-btn nav-search-close" aria-label="Close search"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </form>
+    <div class="nav-actions">
+      <button type="button" class="nav-btn glass nav-search-open" aria-label="Search the archive" aria-expanded="false" aria-controls="nav-search-panel"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></button>
+      <button type="button" class="nav-btn glass nav-theme" aria-label="Dark mode" aria-pressed="false"><svg class="i-moon" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg><svg class="i-sun" aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+      <button type="button" class="nav-btn nav-btn--menu" aria-label="Menu" aria-expanded="false" aria-controls="nav-menu"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 8h16M4 16h16"/></svg></button>
     </div>
   </nav>
-
-  <div class="container" id="main-content">
-    <div class="page-header animate-in">
-      <p class="page-header-label">About</p>
-      <h1>About me.</h1>
-      <p>A bit about who I am, what I do, and why I started writing.</p>
+  <div id="nav-menu" class="nav-panel nav-panel--menu glass glass--panel" hidden>
+    <ul class="menu-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="writing.html">Writing</a></li>
+      <li><a href="work.html">Work</a></li>
+      <li><a href="about.html" aria-current="page">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+  <div id="nav-search-panel" class="nav-panel search-panel glass glass--panel" hidden>
+    <p><strong>Semantic search.</strong> Ask in plain English and it finds posts by meaning, not just matching words. Press Escape to close.</p>
+    <div class="suggests"><button type="button">Training for a marathon</button><button type="button">Moving a team to Kanban</button><button type="button">AI and the future of APIs</button></div>
+    <p class="search-note" aria-live="polite"></p>
+    <ul class="search-hits"></ul>
+    <a class="more" href="search.html">Open the full search page →</a>
+  </div>
+</header>
+<main id="content" tabindex="-1">
+<div class="container page-end">
+  <header class="split split--hero rise" style="padding-top:48px">
+    <div>
+      <p class="kicker">About</p>
+      <h1 class="page-title" style="margin-top:12px">About me.</h1>
+      <p class="lede" style="margin-top:18px">A bit about who I am, what I do, and why I started writing.</p>
+      <p style="margin-top:22px;font-size:20px;line-height:1.65">I'm Harrison, a Delivery Manager based in Wakefield, West Yorkshire. I work in digital transformation, helping teams ship software that matters. I'm passionate about creating genuine value partnerships with clients, not just delivering what's asked but challenging the brief, understanding the why behind the work, and making sure what we build actually moves the needle. I lead with honesty, collaboration and a data-driven mindset.</p>
     </div>
-
-    <div class="about-layout">
-      <div class="about-photo-col animate-in delay-1">
-        <div class="about-photo"><img src="images/about-photo.jpg" alt="Harrison Smith" width="900" height="1947" fetchpriority="high"></div>
-        <p class="about-photo-name">Harrison Smith</p>
-        <p class="about-photo-detail">Wakefield, West Yorkshire</p>
+    <figure class="portrait">
+      <div class="portrait-art">
+        <span aria-hidden="true" style="top:0;right:0;width:70%;aspect-ratio:1;border-radius:50%;background:var(--a1)"></span>
+        <span aria-hidden="true" class="sway" style="bottom:0;left:0;width:44%;aspect-ratio:1;border-radius:0 0 100% 0;background:var(--a3)"></span>
+        <span aria-hidden="true" style="top:40px;left:6%;width:52px;height:200px;border-radius:26px;background:var(--a2)"></span>
+        <span class="portrait-photo glass"><img src="images/about-photo.jpg" alt="Harrison Smith" width="900" height="1947" fetchpriority="high"></span>
       </div>
+      <figcaption>Harrison Smith · Wakefield, West Yorkshire</figcaption>
+    </figure>
+  </header>
 
-      <div class="about-content animate-in delay-2">
-        <h2>The short version</h2>
-        <p>I'm Harrison — a Delivery Manager based in Wakefield, West Yorkshire. I work in digital transformation, helping teams ship software that matters. I'm passionate about creating genuine value partnerships with clients, not just delivering what's asked but challenging the brief, understanding the why behind the work, and making sure what we build actually moves the needle. I lead with honesty, collaboration and a data-driven mindset. I hold PRINCE2 Practitioner and Certified Scrum Master certifications, and I'm completing a Level 6 Project Management Degree Apprenticeship at Northumbria University, fully qualifying in October 2026.</p>
-        <p>Outside of work, you'll find me playing 11-a-side football on Saturdays, watching Leeds United (for better or worse), training for a marathon, hiking, wild camping, travelling, or at the gym.</p>
+  <section class="section" aria-labelledby="now-h">
+    <div style="display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:6px 20px;margin-bottom:20px">
+      <h2 id="now-h" class="section-title">Right now</h2>
+      <p class="ui muted" style="font-size:14px">Updated November 2026</p>
+    </div>
+    <div class="now-grid">
+      <div class="now-card"><svg aria-hidden="true" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><path d="M3 13h18"/></svg><p class="kicker">New chapter</p><p>Joining Hippo Digital as a Delivery Manager on 9 November 2026.</p></div>
+      <div class="now-card"><svg aria-hidden="true" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c3 2.5 9 2.5 12 0v-5"/></svg><p class="kicker">Just finished</p><p>My degree apprenticeship. Results pending, fingers crossed.</p></div>
+      <div class="now-card"><svg aria-hidden="true" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7l4 3-1.5 4.5h-5L8 10z"/></svg><p class="kicker">Probably watching</p><p>Leeds United. For better or worse.</p></div>
+    </div>
+  </section>
 
-        <h2>Why this site exists</h2>
-        <p>I started this site because I wanted a space to think out loud. Some of that thinking is about delivery management — things I've learned on the job, frameworks I've tested, mistakes I've made. Some of it is about university and what it's like juggling a degree alongside full-time work. And some of it is just about life, sports, and whatever's on my mind that week.</p>
-        <p>I believe the best way to learn something properly is to write about it. So that's what I'm doing here.</p>
+  <section class="section" aria-labelledby="out-h">
+    <h2 id="out-h" class="section-title">When I'm not working</h2>
+    <ul class="stickers" role="list">
+      <li><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7l4 3-1.5 4.5h-5L8 10z"/></svg>11-a-side football on Saturdays</li>
+      <li><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6z"/></svg>Leeds United (for better or worse)</li>
+      <li><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17c3 0 4-2 6-2s3 2 6 2h4v3H4z"/><path d="M9 15l1-8 4 2"/></svg>Marathon training</li>
+      <li><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20l6-11 4 6 3-4 5 9z"/></svg>Hiking</li>
+      <li><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20L12 4l9 16z"/><path d="M12 20v-6"/></svg>Wild camping</li>
+      <li><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 16l20-8-6 12-3-5z"/></svg>Travelling</li>
+      <li><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 7v10M18 7v10M3 10v4M21 10v4M6 12h12"/></svg>The gym</li>
+    </ul>
+  </section>
 
-        <h2>What I write about</h2>
-        <ul>
-          <li><strong>Delivery, Agile &amp; Tech Consulting</strong> — Real-world lessons from managing digital projects. Scrum, Kanban, stakeholder management, strategy, innovation, leadership, and everything in between.</li>
-          <li><strong>University &amp; Life</strong> — Reflections on my degree apprenticeship, personal development, and figuring things out.</li>
-          <li><strong>Sports</strong> — Running, football, Leeds United, and whatever else I'm doing or watching.</li>
-        </ul>
+  <section class="section" aria-labelledby="creds-h">
+    <h2 id="creds-h" class="section-title">Credentials</h2>
+    <ul class="creds" role="list">
+      <li><svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="M9 14l-2 7 5-3 5 3-2-7"/></svg><span><b>PRINCE2 Practitioner</b><span class="muted">Project management</span></span></li>
+      <li><svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="M9 14l-2 7 5-3 5 3-2-7"/></svg><span><b>Certified Scrum Master</b><span class="muted">Agile delivery</span></span></li>
+      <li><svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="M9 14l-2 7 5-3 5 3-2-7"/></svg><span><b>Level 6 Project Management Degree Apprenticeship</b><span class="muted">Northumbria University · completed 2026, results pending</span></span></li>
+    </ul>
+  </section>
 
-        <h2>Get in touch</h2>
-        <p>I'm always happy to chat — whether it's about delivery management, something I've written, or sporting achievements. Find me on <a href="https://www.linkedin.com/in/harrison-smith-22456b268" target="_blank" rel="noopener">LinkedIn</a> or drop me a message on the <a href="contact.html">contact page</a>.</p>
+  <section class="section split" aria-labelledby="why-h">
+    <div>
+      <h2 id="why-h" class="section-title">Why this site exists</h2>
+      <p style="margin-top:18px;font-size:20px;line-height:1.65">I started this site because I wanted a space to think out loud. Some of that thinking is about delivery management: things I've learned on the job, frameworks I've tested, mistakes I've made. Some of it is about university and what it's like juggling a degree alongside full-time work. And some of it is just about life, sports, and whatever's on my mind that week.</p>
+    </div>
+    <figure class="quote-panel"><blockquote>I believe the best way to learn something properly is to write about it. So that's what I'm doing here.</blockquote></figure>
+  </section>
+
+  <section class="section" aria-labelledby="what-h">
+    <h2 id="what-h" class="section-title" style="margin-bottom:22px">What I write about</h2>
+    <div class="card-grid" style="grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr))">
+      <a class="topic-card lift s-delivery" href="writing.html?shelf=delivery"><span class="t">Delivery, Agile &amp; Tech</span><span>Real-world lessons from managing digital projects. Scrum, Kanban, stakeholder management, strategy, innovation, leadership, and everything in between.</span><span class="go">Browse 4 posts →</span></a>
+      <a class="topic-card lift s-university" href="writing.html?shelf=university"><span class="t">University</span><span>Reflections on my degree apprenticeship, module by module.</span><span class="go">Browse 3 posts →</span></a>
+      <a class="topic-card lift s-life" href="writing.html?shelf=life"><span class="t">Life</span><span>Personal development, figuring things out, and whatever's on my mind.</span><span class="go">First post coming soon</span></a>
+      <a class="topic-card lift s-sports" href="writing.html?shelf=sports"><span class="t">Sports</span><span>Running, football, Leeds United, and whatever else I'm doing or watching.</span><span class="go">Browse 2 posts →</span></a>
+    </div>
+  </section>
+
+  <section class="cta-card" aria-labelledby="touch-h">
+    <div><h2 id="touch-h">Get in touch</h2><p class="muted" style="margin-top:8px">I'm always happy to chat, whether it's about delivery management, something I've written, or sporting achievements.</p></div>
+    <div class="btns"><a class="btn btn--primary" href="https://www.linkedin.com/in/harrison-smith-22456b268" target="_blank" rel="noopener">Connect on LinkedIn</a><a class="btn btn--outline" href="contact.html">Contact page</a></div>
+  </section>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="foot-top">
+      <p class="foot-tag">Managing life and <em>writing about it.</em></p>
+      <div class="foot-card">
+        <p>I post new stuff regularly. Come say hello.</p>
+        <div class="btns"><a class="btn btn--bright" href="https://www.linkedin.com/in/harrison-smith-22456b268" target="_blank" rel="noopener">Connect on LinkedIn</a><a class="btn btn--on-deep" href="contact.html">Get in touch</a></div>
       </div>
+    </div>
+    <div class="foot-row">
+      <ul class="foot-links">
+        <li><a href="writing.html">Writing</a></li>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="search.html">Search</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="socials">
+        <a href="https://www.linkedin.com/in/harrison-smith-22456b268" target="_blank" rel="noopener" aria-label="LinkedIn"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><path d="M2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
+        <a href="https://github.com/hlasmith" target="_blank" rel="noopener" aria-label="GitHub"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.9a3.4 3.4 0 0 0-.9-2.6c3.1-.4 6.4-1.5 6.4-7A5.4 5.4 0 0 0 20 4.8 5 5 0 0 0 19.9 1S18.7.6 16 2.5a13.4 13.4 0 0 0-7 0C6.3.6 5.1 1 5.1 1A5 5 0 0 0 5 4.8a5.4 5.4 0 0 0-1.5 3.7c0 5.5 3.3 6.6 6.4 7a3.4 3.4 0 0 0-.9 2.6V22"/></svg></a>
+        <a href="contact.html" aria-label="Email"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></a>
+      </div>
+    </div>
+    <div class="foot-base">
+      <span>Harrison Smith · Delivery Manager · Wakefield, West Yorkshire</span>
+      <span><a href="privacy.html">Privacy</a><a href="#top">Back to top ↑</a></span>
     </div>
   </div>
-
-  <footer class="footer">
-    <div class="footer-inner">
-      <div>
-        <p class="footer-name">Harrison Smith</p>
-        <p class="footer-role">Delivery Manager · Wakefield, West Yorkshire</p>
-        <p class="footer-tagline">Managing life and writing about it.</p>
-      </div>
-      <div class="footer-links">
-        <a href="https://www.linkedin.com/in/harrison-smith-22456b268" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="https://github.com/hlasmith" target="_blank" rel="noopener">GitHub</a>
-        <a href="contact.html">Email</a>
-        <a href="privacy.html">Privacy</a>
-      </div>
-    </div>
-  </footer>
-
+</footer>
   <!-- Microsoft Clarity -->
   <script type="text/javascript">
     (function(c,l,a,r,i,t,y){

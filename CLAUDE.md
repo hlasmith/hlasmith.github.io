@@ -1,8 +1,7 @@
 # CLAUDE.md — hlasmith.co.uk
 
-Rules of engagement for any Claude session working in this repo, including the
-daily scheduled improvement task. These rules are binding. When in doubt, do
-less, not more.
+Rules of engagement for any Claude session working in this repo. These rules are
+binding. When in doubt, do less, not more.
 
 ## Project
 
@@ -12,8 +11,12 @@ less, not more.
   Pushing to `main` deploys to production automatically. Pull requests get a
   Cloudflare preview deployment.
 - Pages: index.html (Home), about.html (About), writing.html (Writing),
-  work.html (Work), contact.html (Contact), plus individual blog post HTML files.
-- Content categories: Delivery, Agile & Tech; University & Life; Sports.
+  work.html (Work), contact.html (Contact), search.html, privacy.html, plus
+  individual blog posts in blog/.
+- Content shelves: Delivery, Agile & Tech; University; Life; Sports.
+- Search: Pages Functions in functions/api (Workers AI + Vectorize). The indexer
+  reads `.post-hero-meta` (category) and `.post-content` (body) in each post, so
+  keep those class names.
 
 ## Prime directive: small and surgical
 
@@ -41,20 +44,13 @@ less, not more.
 - Visual, layout, spacing, or design-token changes
 - Anything you are not confident a CI check can fully verify
 
-## Design tokens (do not break these)
+## Design system
 
-- Accent / amber: `#D4A853`
-- Muted text: `#9E9E97`  ← flagged: verify contrast on `#FAFAF7` background vs WCAG AA
-- Light background: `#FAFAF7`; dark theme is charcoal-based with a dark/light toggle
-- Fonts: DM Serif Display (headings), DM Sans (body)
-- Layout width: 1100px, left-aligned navigation
-- Footer tagline: "Managing life and writing about it."
-
-## Standing accessibility backlog (good early wins)
-
-1. Verify and fix muted-text contrast (`#9E9E97` on `#FAFAF7`) to pass WCAG AA.
-2. Add a skip-to-content link.
-3. Add excerpt text to blog cards.
+The design system lives in `.claude/skills/hlasmith-design/SKILL.md`. Read it
+before any visual or layout change. Its colour tokens, fonts and rules are the
+source of truth (Ocean & coral palette, Bodoni Moda / Newsreader / Public Sans,
+Liquid Glass nav, mobile-first, WCAG 2.2 AA). Footer tagline stays
+"Managing life and writing about it."
 
 ## Voice (only relevant to review-lane content edits)
 
