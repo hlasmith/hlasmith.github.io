@@ -2,7 +2,7 @@
 // config that visitors have no reason to see. This returns the site's 404 page
 // for those paths. _routes.json limits this to just these paths (and /api/*), so
 // ordinary page views never run a Function.
-const HIDDEN = /^\/(?:\.claude\/|\.github\/|tools\/|(?:CLAUDE|SEARCH-SETUP|README)\.md$|\.lighthouserc\.json$)/i;
+const HIDDEN = /^\/(?:\.claude\/|\.github\/|functions\/|tools\/|(?:CLAUDE|SEARCH-SETUP|README)\.md$|\.lighthouserc\.json$)/i;
 
 export async function onRequest({ request, next, env }) {
   const { pathname } = new URL(request.url);
