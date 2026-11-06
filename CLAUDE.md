@@ -52,6 +52,13 @@ you change `css/style.css` or `js/main.js`, change the `?v=` value on every page
 (all root pages and every file in `blog/`), or visitors get the old file with the
 new HTML.
 
+## RSS feed
+
+`feed.xml` is generated from the posts' JSON-LD. **After adding or editing a post,
+run `node tools/build-feed.js`** and commit the updated `feed.xml`. Never edit
+`feed.xml` by hand. The post's JSON-LD `author.name` is used as the feed author,
+so guest posts are credited correctly.
+
 ## Design system
 
 The design system lives in `.claude/skills/hlasmith-design/SKILL.md`. Read it
