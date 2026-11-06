@@ -15,7 +15,8 @@ export async function onRequestPost({ request, env }) {
   const vectors = [];
   for (const url of urls) {
     try {
-      const html = await (await fetch(url)).text();
+      // Fetch from the origin we were called on (e.g. pages.dev), keep the canonical url.
+      const html = await (await fetch(new URL(new URL(url).pathname, origin))).text();
       const { title, category, snippet, text } = parsePost(html);
       const chunks = chunk(text, CHUNK_WORDS);
       if (!chunks.length) continue;
