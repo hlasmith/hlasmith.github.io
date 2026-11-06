@@ -60,6 +60,14 @@ source of truth (Ocean & coral palette, Bodoni Moda / Newsreader / Public Sans,
 Liquid Glass nav, mobile-first, WCAG 2.2 AA). Footer tagline stays
 "Managing life and writing about it."
 
+## Share images
+
+Each post has a 1200x630 share image at `images/og/<slug>.png`, used by its
+`og:image`, `twitter:image` and JSON-LD `image`. They are drawn from the post's
+title, shelf and story diagram. **For a new post, or after changing a diagram or
+title, run `node tools/og-images.js <slug>`** (needs Chrome installed) and commit
+the PNG. LinkedIn caches previews; use its Post Inspector to refresh one.
+
 ## Voice (only relevant to review-lane content edits)
 
 Personal, honest, self-deprecating, conversational — talking to a mate, not
