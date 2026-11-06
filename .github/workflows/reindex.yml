@@ -4,6 +4,10 @@ on:
   push:
     branches: [main]
   workflow_dispatch: {}   # lets you trigger manually from the Actions tab
+  schedule:
+    # Nightly at 03:00 UTC. Auto-merged PRs are merged by the GitHub Actions bot,
+    # and GitHub does not fire push workflows for those, so this catches them up.
+    - cron: "0 3 * * *"
 
 concurrency:
   group: reindex-${{ github.ref }}
@@ -28,6 +32,8 @@ jobs:
           RESPONSE=$(curl --fail --silent --show-error --max-time 90 \
             -X POST \
             -H "x-reindex-key: $REINDEX_KEY" \
-            https://hlasmith.co.uk/api/reindex)
+            https://hlasmith-github-io.pages.dev/api/reindex)
+          # pages.dev, not hlasmith.co.uk: the custom domain's bot protection
+          # returns 403 to requests from GitHub's runners.
           echo "Reindex response: $RESPONSE"
           echo "$RESPONSE" | grep -q '"vectors"' || { echo "Unexpected response, failing."; exit 1; }
