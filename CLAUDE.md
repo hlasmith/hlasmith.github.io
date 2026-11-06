@@ -52,6 +52,21 @@ you change `css/style.css` or `js/main.js`, change the `?v=` value on every page
 (all root pages and every file in `blog/`), or visitors get the old file with the
 new HTML.
 
+## Security
+
+- `_headers` sends a strict **Content-Security-Policy**. Scripts must be files
+  in `js/` (or the Cloudflare analytics beacon). **Never add a new inline
+  `<script>` or `onclick=`-style handler**: it will be blocked. The one allowed
+  inline script is the theme loader in every page's `<head>`, allowed by its
+  sha256 hash; if you change it, recompute the hash from the committed bytes and
+  update `_headers`. New third-party origins (fonts, embeds, APIs) must be added
+  to the policy deliberately.
+- `functions/_middleware.js` + `_routes.json` return 404 for repo internals
+  (`CLAUDE.md`, `.claude/`, `.github/`, `tools/`, etc.). Add new internal paths
+  to both files.
+- `404.html` uses root-absolute links (`/css/...`) because it can be served at
+  any depth. Keep it that way.
+
 ## RSS feed
 
 `feed.xml` is generated from the posts' JSON-LD. **After adding or editing a post,

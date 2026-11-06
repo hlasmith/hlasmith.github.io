@@ -1,0 +1,5 @@
+{
+  "version": 1,
+  "include": ["/api/*", "/.claude/*", "/.github/*", "/tools/*", "/CLAUDE.md", "/SEARCH-SETUP.md", "/README.md", "/.lighthouserc.json"],
+  "exclude": []
+}
